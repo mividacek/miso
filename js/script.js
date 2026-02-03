@@ -49,10 +49,6 @@ function detectLanguage() {
 /* -----------------------------
    UI HELPERS
 ------------------------------*/
-  const infoBlockEl = document.getElementById("infoBlock");
-  const hasInfo = (t.infoTitle || t.infoText);
-
-  if (infoBlockEl) infoBlockEl.style.display = hasInfo ? "block" : "none";
 
 
 function closeMapUI() {
@@ -103,6 +99,9 @@ function setLang(lang) {
   const mapBtnEl = document.getElementById("mapBtn");
   const mapLoadingEl = document.getElementById("mapLoading");
   const mapLocationEl = document.getElementById("mapLocation");
+  const infoBlockEl = document.getElementById("infoBlock");
+  const infoTitleEl = document.getElementById("infoTitle");
+  const infoTextEl = document.getElementById("infoText");
 
   if (titleEl) titleEl.innerHTML = t.title || "";
   if (locationEl) locationEl.innerHTML = t.location || "";
@@ -117,6 +116,11 @@ function setLang(lang) {
   if (mapLoadingEl) mapLoadingEl.innerHTML = t.mapLoading || "";
   if (mapLocationEl) mapLocationEl.innerHTML = t.mapLocation || "";
 
+  if (infoTitleEl) infoTitleEl.innerHTML = t.infoTitle || "";
+  if (infoTextEl) infoTextEl.innerHTML = t.infoText || "";
+
+  const hasInfo = (t.infoTitle || t.infoText);
+  if (infoBlockEl) infoBlockEl.style.display = hasInfo ? "block" : "none";
   // reset UI states on language change
   closeHintUI();
   closeMapUI();
@@ -180,5 +184,6 @@ function toggleMap() {
    INIT
 ------------------------------*/
 setLang(detectLanguage());
+
 
 
