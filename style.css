@@ -58,6 +58,18 @@ h2 {
   font-size: 1rem;
 }
 
+.info {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.info h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
 .riddle {
   margin-top: 40px;
   padding: 20px;
@@ -268,6 +280,7 @@ h2 {
   50%{ transform:scale(1.05); }
   100%{ transform:scale(1); }
 }
+
 
 
 
