@@ -161,10 +161,68 @@ const LOCATIONS = {
         `
   },
 }
-/*
+
   ribnjak:{
-    hr:{ title:"Ribnjak", location:"📍 Ribnjak", mapLocation:"Sljedeća točka", map:`...` },
-    en:{ title:"Fishpond", location:"📍 Fishpond", mapLocation:"Next spot", map:`...` }
+hr: {
+    title: "Šišmiš Mišo i izgubljeni",
+    location: "📍 Ribnjak",
+    story: `
+        <p>Mišo je stigao do Ribnjaka</p>
+         `,
+    riddleTitle: "🔍 Zagonetka",
+  riddleText: `
+      Smisli tekst<br>
+    <p><strong>Gdje će Miško pronaći prijatelje?</strong></p>
+  `,
+  hintBtn: "Trebam pomoć",
+  hint: "Smislo hint.",
+  mapBtn: "Treba mi točna lokacija",
+  mapLoading: "⏳ Učitavanje karte...",
+  mapOpened: "Mapa otvorena ✓",
+  mapLocation: "Upitno",
+  map: `
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+      width="600"
+      height="650"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  `
+},
+
+
+  en: {
+    title: "Miso the Bat and the Lost Ones",
+    location: "📍 Fishpond",
+    story: `
+      <p>Miso arrived at the Fishpond.</p>
+    `,
+    riddleTitle: "🔍 Riddle",
+    riddleText: `
+      Make up a riddle<br>
+      <strong>What is the next location?</strong>
+    `,
+    hintBtn: "I need a hint",
+    hint: "Make up a hint",
+    mapBtn: "I need the correct location",
+    mapLoading: "⏳ Loading map...",
+    mapOpened: "Map opened ✓",
+    mapLocation: "Unkown",
+    map: `
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+        width="600"
+        height="650"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        `
+  },
   }
-*/
 };
+
