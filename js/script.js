@@ -49,6 +49,12 @@ function detectLanguage() {
 /* -----------------------------
    UI HELPERS
 ------------------------------*/
+  const infoBlockEl = document.getElementById("infoBlock");
+  const hasInfo = (t.infoTitle || t.infoText);
+
+  if (infoBlockEl) infoBlockEl.style.display = hasInfo ? "block" : "none";
+
+
 function closeMapUI() {
   const map = document.getElementById("mapContainer");
   const loader = document.getElementById("mapLoader");
@@ -174,4 +180,5 @@ function toggleMap() {
    INIT
 ------------------------------*/
 setLang(detectLanguage());
+
 
