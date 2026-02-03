@@ -11,20 +11,21 @@ const LOCATIONS = {
         Krenuo sam ih potražiti, ali na otoku susrećem i čudna, nepoznata bića.<br>
         Hoćeš li mi pomoći pronaći tko još pripada Brijunima?</p>
 
-        <p><strong>Za one koji žele znati više</strong></p> //https://www.np-brijuni.hr/hr/brijuni/prirodna-bastina/otocna-fauna
-        <p>Šišmiši se na Brijunima istražuju i prate od 2010. godine. Izoliranost ovog otočja i ograničenja koja nalažu pravila ponašanja u Nacionalnom parku učinili su Brijune izrazito pogodnim mjestom za život odnosno povremeno obitavanje različitih vrsta šišmiša. Mir i neometanje od ljudi, dovoljna količina hrane (noćnih kukaca) te širok izbor različitih staništa za dnevni odmor razlozi su zbog kojih se na ovom relativno malom području može susresti čak 18 različitih vrsta ovih korisnih i ugroženih životinjica. Sve su vrste šišmiša u Europi zaštićene međunarodnim konvencijama. Mnoge vrste koje obitavaju na Brijunima na popisu su ugroženih vrsta. Tijekom istraživanja 2014. godine utvrđeno je da su Brijuni lokacija važna za razmnožavanje vrste veliki večernjak (Nyctalus lasiopterus), koja je prije toga smatrana gotovo izumrlom za područje RH. </p>
+        <p><strong>Za one koji žele znati više</strong></p>
+        <p>Šišmiši se na Brijunima istražuju i prate od 2010. godine. Izoliranost ovog otočja i ograničenja koja nalažu pravila ponašanja u Nacionalnom parku učinili su Brijune izrazito pogodnim mjestom za život odnosno povremeno obitavanje različitih vrsta šišmiša. Mir i neometanje od ljudi, dovoljna količina hrane (noćnih kukaca) te širok izbor različitih staništa za dnevni odmor razlozi su zbog kojih se na ovom relativno malom području može susresti čak 18 različitih vrsta ovih korisnih i ugroženih životinjica. Sve su vrste šišmiša u Europi zaštićene međunarodnim konvencijama. Mnoge vrste koje obitavaju na Brijunima na popisu su ugroženih vrsta. Tijekom istraživanja 2014. godine utvrđeno je da su Brijuni lokacija važna za razmnožavanje vrste veliki večernjak (<i>Nyctalus lasiopterus</i>), koja je prije toga smatrana gotovo izumrlom za područje RH. </p>
       `,
+      //https://www.np-brijuni.hr/hr/brijuni/prirodna-bastina/otocna-fauna
       riddleTitle: "🔍 Zagonetka",
       riddleText: `
         Letim noću, prijatelje tražim uz vodu.<br>
-        Gdje se ribe skrivaju, a ljudi se ne kupaju?<br>
+        Gdje se mlade ribe skrivaju, a ljudi se ne kupaju?<br>
         Odvojeno od mora, iako su nekada bili jedno.<br>
         Nije jezero, ali mirno diše.<br>
         Most dijeli, a pogled s njega vodi dalje.<br>
         <p><strong>Gdje će Miško pronaći prijatelje?</strong></p>
       `,
       hintBtn: "Trebam pomoć",
-      hint: "⛳ Blizu golfereske sedmice.",
+      hint: "⛳ Blizu golfereske ⑫.",
       mapBtn: "Treba mi točna lokacija",
       mapLoading: "⏳ Učitavanje karte...",
       mapOpened: "Mapa otvorena ✓",
@@ -46,22 +47,23 @@ const LOCATIONS = {
       title: "Miso the Bat and the Lost Ones",
       location: "📍 Friendship Square",
       story: `
-        <p>Miso the bat lives on the Brijuni Islands, home to
-        <strong>18 bat species</strong>.</p>
+        <p>I am Mišo, a bat from Brijuni.<br>
+        I've been living here for years, along with many other interesting creatures.<br>
+        But tonight my friends are not coming...<br>
+        I set out to look for them, but on the island I also encounter strange, unknown creatures.<br>
+        Will you help me find who else belongs to Brijuni?</p>
 
-        <p>Silence, insects and safe shelters make this place ideal.</p>
-
-        <p>But something is wrong — friends are disappearing and
-        <strong>invasive species</strong> appear.</p>
-
-        <p>Join Miso and help uncover the mystery.</p>
+        <p><strong>For those who want to know more</strong></p>
+        <p>Bats have been researched and monitored on Brijuni since 2010. The isolation of this archipelago and the restrictions imposed by the rules of conduct in the National Park have made Brijuni an extremely suitable place for the life or occasional residence of various species of bats. Peace and freedom from human interference, a sufficient amount of food (nocturnal insects) and a wide variety of different habitats for daytime rest are the reasons why as many as 18 different species of these useful and endangered animals can be found in this relatively small area. All species of bats in Europe are protected by international conventions. Many species that live on Brijuni are on the list of endangered species. During research in 2014, it was determined that Brijuni is an important location for the reproduction of the large night bat (<i>Nyctalus lasiopterus</i>), which was previously considered almost extinct in the Republic of Croatia. </p>
       `,
       riddleTitle: "🔍 Riddle",
       riddleText: `
-        I am not the sea, although I once was.<br>
-        I am not a lake, yet I breathe calmly.<br>
-        A bridge divides me, and the view from it leads onward.<br>
-        <strong>What is the next location?</strong>
+        I fly at night by the water, looking for my friends.<br>
+        Where do young fish hide, and people never swim?<br>
+        Separated from the sea, although they were once one.<br>
+        It's not a lake, but it breathes peacefully.<br>
+        The bridge divides, and the view from it leads further.<br>
+        <p><strong>Where will Miško find friends?</strong></p>
       `,
       hintBtn: "I need a hint",
       hint: "⛳ Near the golf hole number seven.",
@@ -213,4 +215,5 @@ const LOCATIONS = {
     }
   }
 };
+
 
