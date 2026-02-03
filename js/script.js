@@ -1,214 +1,177 @@
-const LOCATIONS = {
-  start: {
-    hr: {
-      title: "Šišmiš Mišo i izgubljeni",
-      location: "📍 Trg prijateljstva",
-      story: `
-        <p>Na Brijunima živi šišmiš Mišo. Ovo mirno otočje idealno je mjesto za život
-        čak <strong>18 različitih vrsta šišmiša</strong>.</p>
+let mapLoaded = false;
 
-        <p>Mir, obilje noćnih kukaca i raznolika staništa čine Brijune sigurnim
-        utočištem. Sve europske vrste šišmiša su strogo zaštićene.</p>
+/* -----------------------------
+   READ URL PARAMS
+------------------------------*/
+function getParams() {
+  return new URLSearchParams(window.location.search);
+}
 
-        <p>No Mišo je zabrinut – neki njegovi prijatelji nestaju, a na otoku se
-        pojavljuju i nepoznati organizmi, <strong>invazivne vrste</strong>.</p>
+function detectLocation() {
+  const params = getParams();
+  return params.get("loc") || "start";
+}
 
-        <p>Kreni s Mišom i pomozi mu pronaći odgovore.</p>
-      `,
-      riddleTitle: "🔍 Zagonetka",
-      riddleText: `
-        Nisam more, iako sam to nekad bio.<br>
-        Nisam jezero, ali mirno dišem.<br>
-        Most me dijeli, a pogled s njega vodi dalje.<br>
-        <p><strong>Gdje će Miško pronaći prijatelje?</strong></p>
-      `,
-      hintBtn: "Trebam pomoć",
-      hint: "⛳ Blizu golfereske sedmice.",
-      mapBtn: "Treba mi točna lokacija",
-      mapLoading: "⏳ Učitavanje karte...",
-      mapOpened: "Mapa otvorena ✓",
-      mapLocation: "Ribnjak",
-      map: `
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
-          width="600"
-          height="650"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `
-    },
+const CURRENT_LOCATION = detectLocation();
 
-    en: {
-      title: "Miso the Bat and the Lost Ones",
-      location: "📍 Friendship Square",
-      story: `
-        <p>Miso the bat lives on the Brijuni Islands, home to
-        <strong>18 bat species</strong>.</p>
+function getTexts(lang) {
+  const locationData = LOCATIONS[CURRENT_LOCATION];
+  if (!locationData) return null;
+  return locationData[lang] || locationData["en"];
+}
 
-        <p>Silence, insects and safe shelters make this place ideal.</p>
+/* -----------------------------
+   LANGUAGE DETECTION
+------------------------------*/
+function detectLanguage() {
+  const locationData = LOCATIONS[CURRENT_LOCATION] || {};
+  const params = getParams();
 
-        <p>But something is wrong — friends are disappearing and
-        <strong>invasive species</strong> appear.</p>
-
-        <p>Join Miso and help uncover the mystery.</p>
-      `,
-      riddleTitle: "🔍 Riddle",
-      riddleText: `
-        I am not the sea, although I once was.<br>
-        I am not a lake, yet I breathe calmly.<br>
-        A bridge divides me, and the view from it leads onward.<br>
-        <strong>What is the next location?</strong>
-      `,
-      hintBtn: "I need a hint",
-      hint: "⛳ Near the golf hole number seven.",
-      mapBtn: "I need the correct location",
-      mapLoading: "⏳ Loading map...",
-      mapOpened: "Map opened ✓",
-      mapLocation: "Fishpond",
-      map: `
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
-          width="600"
-          height="650"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `
-    },
-
-    it: {
-      title: "Il pipistrello Miso e gli scomparsi",
-      location: "📍 Piazza dell'amicizia",
-      story: `
-        <p>Miso vive alle Brioni, un luogo ideale per
-        <strong>18 specie di pipistrelli</strong>.</p>
-
-        <p>Silenzio e natura offrono rifugio sicuro.</p>
-
-        <p>Ma qualcosa non va: compaiono specie invasive.</p>
-
-        <p>Aiuta Miso a scoprire cosa sta succedendo.</p>
-      `,
-      riddleTitle: "🔍 Indovinello",
-      riddleText: `
-        Non sono il mare, anche se un tempo lo ero.<br>
-        Non sono un lago, ma respiro tranquillo.<br>
-        Un ponte mi divide e lo sguardo da lì conduce oltre.<br>
-        <strong>Qual è la prossima tappa?</strong>
-      `,
-      hintBtn: "Ho bisogno di un aiuto",
-      hint: "⛳ Vicino alla buca numero sette del golf.",
-      mapBtn: "Ho bisogno del luogo esatto",
-      mapLoading: "⏳ Caricamento mappa...",
-      mapOpened: "Mappa aperta ✓",
-      mapLocation: "Peschiera",
-      map: `
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
-          width="600"
-          height="650"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `
-    },
-
-    de: {
-      title: "Die Fledermaus Miso und die Vermissten",
-      location: "📍 Platz der Freundschaft",
-      story: `
-        <p>Miso lebt auf den Brijuni-Inseln, Heimat von
-        <strong>18 Fledermausarten</strong>.</p>
-
-        <p>Ruhe und Natur bieten ideale Lebensbedingungen.</p>
-
-        <p>Doch invasive Arten bedrohen das Gleichgewicht.</p>
-
-        <p>Hilf Miso, die Wahrheit zu finden.</p>
-      `,
-      riddleTitle: "🔍 Rätsel",
-      riddleText: `
-        Ich bin nicht das Meer, obwohl ich es einst war.<br>
-        Ich bin kein See, doch ich atme ruhig.<br>
-        Eine Brücke teilt mich, und der Blick von ihr führt weiter.<br>
-        <strong>Was ist der nächste Ort?</strong>
-      `,
-      hintBtn: "Ich brauche einen Hinweis",
-      hint: "⛳ In der Nähe von Golfbahn Nummer sieben.",
-      mapBtn: "Ich brauche den richtigen Standort.",
-      mapLoading: "⏳ Karte wird geladen...",
-      mapOpened: "Karte geöffnet ✓",
-      mapLocation: "Fischteich",
-      map: `
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
-          width="600"
-          height="650"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `
-    }
-  },
-
-  ribnjak: {
-    hr: {
-      title: "Šišmiš Mišo i izgubljeni",
-      location: "📍 Ribnjak",
-      story: `<p>Mišo je stigao do Ribnjaka.</p>`,
-      riddleTitle: "🔍 Zagonetka",
-      riddleText: `Smisli tekst...`,
-      hintBtn: "Trebam pomoć",
-      hint: "Smisli hint...",
-      mapBtn: "Treba mi točna lokacija",
-      mapLoading: "⏳ Učitavanje karte...",
-      mapOpened: "Mapa otvorena ✓",
-      mapLocation: "Ribnjak",
-      map: `
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
-          width="600"
-          height="650"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `
-    },
-
-    en: {
-      title: "Miso the Bat and the Lost Ones",
-      location: "📍 Fishpond",
-      story: `<p>Miso arrived at the Fishpond.</p>`,
-      riddleTitle: "🔍 Riddle",
-      riddleText: `Make up a riddle...`,
-      hintBtn: "I need a hint",
-      hint: "Make up a hint...",
-      mapBtn: "I need the correct location",
-      mapLoading: "⏳ Loading map...",
-      mapOpened: "Map opened ✓",
-      mapLocation: "Fishpond",
-      map: `
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
-          width="600"
-          height="650"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `
-    }
+  // 1) URL lang
+  const urlLang = (params.get("lang") || "").toLowerCase();
+  if (urlLang && locationData[urlLang]) {
+    localStorage.setItem("lang", urlLang);
+    return urlLang;
   }
-};
+
+  // 2) saved
+  const savedLang = (localStorage.getItem("lang") || "").toLowerCase();
+  if (savedLang && locationData[savedLang]) return savedLang;
+
+  // 3) browser
+  const browserLang = (navigator.language || "en").slice(0, 2).toLowerCase();
+  if (locationData[browserLang]) return browserLang;
+
+  // 4) fallback
+  return "en";
+}
+
+/* -----------------------------
+   UI HELPERS
+------------------------------*/
+function closeMapUI() {
+  const map = document.getElementById("mapContainer");
+  const loader = document.getElementById("mapLoader");
+  const loadingText = document.getElementById("mapLoading");
+  const title = document.getElementById("mapLocation");
+  const btn = document.getElementById("mapBtn");
+
+  mapLoaded = false;
+
+  if (map) {
+    map.innerHTML = "";
+    map.classList.remove("show");
+  }
+  if (loader) loader.classList.remove("show");
+  if (loadingText) loadingText.classList.remove("show");
+  if (title) title.classList.remove("show");
+  if (btn) {
+    btn.classList.remove("loading");
+    btn.classList.remove("opened");
+  }
+}
+
+function closeHintUI() {
+  const hint = document.getElementById("hintText");
+  if (hint) hint.classList.remove("show");
+}
+
+/* -----------------------------
+   SET LANGUAGE (MAIN RENDER)
+------------------------------*/
+function setLang(lang) {
+  const t = getTexts(lang);
+  if (!t) return;
+
+  localStorage.setItem("lang", lang);
+  document.documentElement.lang = lang;
+
+  // Fill ALL content
+  const titleEl = document.getElementById("title");
+  const locationEl = document.getElementById("location");
+  const storyEl = document.getElementById("story");
+  const riddleTitleEl = document.getElementById("riddleTitle");
+  const riddleTextEl = document.getElementById("riddleText");
+  const hintBtnEl = document.getElementById("hintBtn");
+  const hintTextEl = document.getElementById("hintText");
+  const mapBtnEl = document.getElementById("mapBtn");
+  const mapLoadingEl = document.getElementById("mapLoading");
+  const mapLocationEl = document.getElementById("mapLocation");
+
+  if (titleEl) titleEl.innerHTML = t.title || "";
+  if (locationEl) locationEl.innerHTML = t.location || "";
+  if (storyEl) storyEl.innerHTML = t.story || "";
+  if (riddleTitleEl) riddleTitleEl.innerHTML = t.riddleTitle || "";
+  if (riddleTextEl) riddleTextEl.innerHTML = t.riddleText || "";
+
+  if (hintBtnEl) hintBtnEl.innerHTML = t.hintBtn || "";
+  if (hintTextEl) hintTextEl.innerHTML = t.hint || "";
+
+  if (mapBtnEl) mapBtnEl.innerHTML = t.mapBtn || "";
+  if (mapLoadingEl) mapLoadingEl.innerHTML = t.mapLoading || "";
+  if (mapLocationEl) mapLocationEl.innerHTML = t.mapLocation || "";
+
+  // reset UI states on language change
+  closeHintUI();
+  closeMapUI();
+}
+
+/* -----------------------------
+   BUTTON ACTIONS
+------------------------------*/
+function toggleHint() {
+  const hint = document.getElementById("hintText");
+  if (!hint) return;
+  hint.classList.toggle("show");
+}
+
+function toggleMap() {
+  const map = document.getElementById("mapContainer");
+  const loader = document.getElementById("mapLoader");
+  const loadingText = document.getElementById("mapLoading");
+  const btn = document.getElementById("mapBtn");
+  const title = document.getElementById("mapLocation");
+
+  if (!map || !loader || !loadingText || !btn || !title) return;
+
+  const lang = document.documentElement.lang || "en";
+  const t = getTexts(lang);
+  if (!t) return;
+
+  // If already loaded -> just toggle open/close
+  if (mapLoaded) {
+    const willShow = !map.classList.contains("show");
+    map.classList.toggle("show", willShow);
+    title.classList.toggle("show", willShow);
+    btn.classList.toggle("opened", willShow);
+    return;
+  }
+
+  // First time: show loader + text, then inject iframe
+  btn.classList.add("loading");
+  loader.classList.add("show");
+  loadingText.classList.add("show");
+
+  // ensure closed state before opening
+  map.classList.remove("show");
+  title.classList.remove("show");
+
+  setTimeout(() => {
+    map.innerHTML = t.map || "";
+    mapLoaded = true;
+
+    loader.classList.remove("show");
+    loadingText.classList.remove("show");
+    btn.classList.remove("loading");
+
+    map.classList.add("show");
+    title.classList.add("show");
+    btn.classList.add("opened");
+  }, 800);
+}
+
+/* -----------------------------
+   INIT
+------------------------------*/
+setLang(detectLanguage());
+
