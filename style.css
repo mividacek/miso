@@ -43,7 +43,7 @@ h2 {
 
 
 .hero-image {
-  width: 30%;
+  width: 45%;
   max-width: 320px;
   height: auto;
   display: block;
@@ -268,4 +268,5 @@ h2 {
   50%{ transform:scale(1.05); }
   100%{ transform:scale(1); }
 }
+
 
