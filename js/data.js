@@ -23,10 +23,10 @@ const LOCATIONS = {
         Odvojeno od mora, iako su nekada bili jedno.<br>
         Nije jezero, ali mirno diše.<br>
         Most dijeli, a pogled s njega vodi dalje.<br>
-        <p><strong>Gdje će Miško pronaći prijatelje?</strong></p>
+        <p><strong>Gdje će Mišo pronaći prijatelje?</strong></p>
       `,
       hintBtn: "Trebam pomoć",
-      hint: "⛳ Blizu golfereske ⑫.",
+      hint: "⛳ Blizu golferske ⑫.",
       mapBtn: "Stvarno ne znam gdje ići, treba mi mapa s lokacijom",
       mapLoading: "⏳ Učitavanje karte...",
       mapOpened: "Mapa otvorena ✓",
@@ -47,7 +47,7 @@ const LOCATIONS = {
     en: {
       title: "Misho the Bat and the Lost Ones",
       location: `<p>📍 Friendship Square</p>
-            <img src="images/Šišmiš_Mišo.png" alt="Imahe of the bat Misho" class="hero-image">`,
+            <img src="images/Šišmiš_Mišo.png" alt="Image of the bat Misho" class="hero-image">`,
       story: `
         <p>I am Misho, a bat from Brijuni.<br>
         I've been living here for years, along with many other interesting creatures.<br>
@@ -65,7 +65,7 @@ const LOCATIONS = {
         Separated from the sea, although they were once one.<br>
         It's not a lake, but it breathes peacefully.<br>
         The bridge divides, and the view from it leads further.<br>
-        <p><strong>Where will Miško find friends?</strong></p>
+        <p><strong>Where will Misho find friends?</strong></p>
       `,
       hintBtn: "I need a hint",
       hint: "⛳ Near the golf hole number ⑫.",
@@ -89,7 +89,7 @@ const LOCATIONS = {
     it: {
       title: "Il pipistrello Misho e gli scomparsi",
       location: `<p>📍 Piazza dell'amicizia</p>
-                  <img src="images/Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
+                  <img src="images/Šišmiš_Mišo.png" alt="Image of the bat Misho" class="hero-image">`,
       story: `
         <p>Sono Mišo, un pipistrello di Brioni.<br>
         Vivo qui da anni, insieme a molte altre creature interessanti.<br>
@@ -107,7 +107,7 @@ const LOCATIONS = {
         Separati dal mare, anche se un tempo erano un tutt'uno.<br>
         Non è un lago, ma respira pacificamente.<br>
         Il ponte lo divide e la vista da lì si estende oltre.<br>
-        <p><strong>Dove troverà amici Miško?</strong></p>
+        <p><strong>Dove troverà amici Misho?</strong></p>
       `,
       hintBtn: "Ho bisogno di un aiuto",
       hint: "⛳ Vicino alla buca numero ⑫ del golf.",
@@ -131,7 +131,7 @@ const LOCATIONS = {
     de: {
       title: "Die Fledermaus Misho und die Vermissten",
       location: `<p>📍 Platz der Freundschaft</p>
-                        <img src="images/Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
+                        <img src="images/Šišmiš_Mišo.png" alt="Bild der Fledermaus Misho" class="hero-image">`,
       story: `
         <p>Ich bin Mišo, eine Fledermaus von Brijuni.<br>
         Ich lebe schon seit Jahren hier, zusammen mit vielen anderen interessanten Geschöpfen.<br>
@@ -149,7 +149,7 @@ const LOCATIONS = {
         Vom Meer getrennt, obwohl sie einst eins waren.<br>
         Es ist kein See, doch er atmet friedlich.<br>
         Die Brücke teilt den Weg, und der Blick von ihr führt weiter.<br>
-        <p><strong>Wo wird Miško Freunde finden?</strong></p>
+        <p><strong>Wo wird Misho Freunde finden?</strong></p>
       `,
       hintBtn: "Ich brauche einen Hinweis",
       hint: "⛳ In der Nähe von Golfbahn Nummer ⑫.",
@@ -204,7 +204,7 @@ const LOCATIONS = {
     en: {
       title: "Misho the Bat and the Lost Ones",
       location: `<p>📍 Fishpond</p>
-            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
+            <img src="images/Plavi_rak.png" alt="Picture of the blue crab" class="hero-image">`,
       story: `<p>Misho arrived at the Fishpond.</p>
               <p><strong>For those who want to know more</strong></p>
               <p>Nobody knows...</p>
@@ -233,7 +233,7 @@ const LOCATIONS = {
      it: {
       title: "Il pipistrello Misho e gli scomparsi",
       location: `<p>📍 Peschiera</p>
-            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
+            <img src="images/Plavi_rak.png" alt="Immagine del granchio blu" class="hero-image">`,
       story: `
         <p>Misho arrivò alla Peschiera.</p>
 
@@ -243,7 +243,7 @@ const LOCATIONS = {
       riddleTitle: "🔍 Indovinello",
       riddleText: `
         Inventa un indovinello.
-        <p><strong>Dove troverà amici Miško?</strong></p>
+        <p><strong>Dove troverà amici Misho?</strong></p>
       `,
       hintBtn: "Ho bisogno di un aiuto",
       hint: "Inventa un suggerimento...",
@@ -266,7 +266,7 @@ const LOCATIONS = {
     de: {
       title: "Die Fledermaus Misho und die Vermissten",
       location: `<p>📍 Fischteich</p>
-            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
+            <img src="images/Plavi_rak.png" alt="Bild der blauen Krabbe" class="hero-image">`,
       story: `
         <p>Misho kam am Fischteich an.</p>
 
@@ -295,6 +295,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
