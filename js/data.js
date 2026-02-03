@@ -4,16 +4,15 @@ const LOCATIONS = {
       title: "Šišmiš Mišo i izgubljeni",
       location: "📍 Trg prijateljstva",
       story: `
-        <p>Na Brijunima živi šišmiš Mišo. Ovo mirno otočje idealno je mjesto za život
-        čak <strong>18 različitih vrsta šišmiša</strong>.</p>
 
-        <p>Mir, obilje noćnih kukaca i raznolika staništa čine Brijune sigurnim
-        utočištem. Sve europske vrste šišmiša su strogo zaštićene.</p>
+        <p>Ja sam Mišo, šišmiš s Brijuna.<brY
+        Ovdje živim već godinama, zajedno s mnogim drugim noćnim letačima.<br>
+        No ove noći moji prijatelji se ne javljaju…<br>
+        Krenuo sam ih potražiti, ali na otoku susrećem i čudna, nepoznata bića.<br>
+        Hoćeš li mi pomoći pronaći tko još pripada Brijunima?</p>
 
-        <p>No Mišo je zabrinut – neki njegovi prijatelji nestaju, a na otoku se
-        pojavljuju i nepoznati organizmi, <strong>invazivne vrste</strong>.</p>
-
-        <p>Kreni s Mišom i pomozi mu pronaći odgovore.</p>
+        <p><strong>Za one koji žele znati više</strong></p>
+        <p>Šišmiši se na Brijunima istražuju i prate od 2010. godine. Izoliranost ovog otočja i ograničenja koja nalažu pravila ponašanja u Nacionalnom parku učinili su Brijune izrazito pogodnim mjestom za život odnosno povremeno obitavanje različitih vrsta šišmiša. Mir i neometanje od ljudi, dovoljna količina hrane (noćnih kukaca) te širok izbor različitih staništa za dnevni odmor razlozi su zbog kojih se na ovom relativno malom području može susresti čak 18 različitih vrsta ovih korisnih i ugroženih životinjica. Sve su vrste šišmiša u Europi zaštićene međunarodnim konvencijama. Mnoge vrste koje obitavaju na Brijunima na popisu su ugroženih vrsta. Tijekom istraživanja 2014. godine utvrđeno je da su Brijuni lokacija važna za razmnožavanje vrste veliki večernjak (Nyctalus lasiopterus), koja je prije toga smatrana gotovo izumrlom za područje RH. </p>
       `,
       riddleTitle: "🔍 Zagonetka",
       riddleText: `
