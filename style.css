@@ -53,7 +53,7 @@ h2 {
 
 
 .story {
-  text-align: left;
+  text-align: center;
   line-height: 1.6;
   font-size: 1rem;
 }
@@ -268,5 +268,6 @@ h2 {
   50%{ transform:scale(1.05); }
   100%{ transform:scale(1); }
 }
+
 
 
