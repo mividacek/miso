@@ -51,11 +51,9 @@ const LOCATIONS = {
         I've been living here for years, along with many other interesting creatures.<br>
         But tonight my friends are not coming...<br>
         I set out to look for them, but on the island I also encounter strange, unknown creatures.<br>
-        Will you help me find who else belongs to Brijuni?</p>
-
-        <p><strong>For those who want to know more</strong></p>
-        <p>Bats have been researched and monitored on Brijuni since 2010. The isolation of this archipelago and the restrictions imposed by the rules of conduct in the National Park have made Brijuni an extremely suitable place for the life or occasional residence of various species of bats. Peace and freedom from human interference, a sufficient amount of food (nocturnal insects) and a wide variety of different habitats for daytime rest are the reasons why as many as 18 different species of these useful and endangered animals can be found in this relatively small area. All species of bats in Europe are protected by international conventions. Many species that live on Brijuni are on the list of endangered species. During research in 2014, it was determined that Brijuni is an important location for the reproduction of the large night bat (<i>Nyctalus lasiopterus</i>), which was previously considered almost extinct in the Republic of Croatia. </p>
-      `,
+        Will you help me find who else belongs to Brijuni?</p>`,
+      infoTitle: "For those who want to know more",
+      infoText: "Bats have been researched and monitored on Brijuni since 2010. The isolation of this archipelago and the restrictions imposed by the rules of conduct in the National Park have made Brijuni an extremely suitable place for the life or occasional residence of various species of bats. Peace and freedom from human interference, a sufficient amount of food (nocturnal insects) and a wide variety of different habitats for daytime rest are the reasons why as many as 18 different species of these useful and endangered animals can be found in this relatively small area. All species of bats in Europe are protected by international conventions. Many species that live on Brijuni are on the list of endangered species. During research in 2014, it was determined that Brijuni is an important location for the reproduction of the large night bat (<i>Nyctalus lasiopterus</i>), which was previously considered almost extinct in the Republic of Croatia.",
       riddleTitle: "🔍 Riddle",
       riddleText: `
         I fly at night by the water, looking for my friends.<br>
@@ -293,6 +291,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
