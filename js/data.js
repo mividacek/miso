@@ -3,7 +3,7 @@ const LOCATIONS = {
     hr: {
       title: "Šišmiš Mišo i izgubljeni",
       location: `<p>📍 Trg prijateljstva</p>
-      <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
+      <img src="images/Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
       story: `
 
         <p>Ja sam Mišo, šišmiš s Brijuna.<br>
@@ -47,7 +47,7 @@ const LOCATIONS = {
     en: {
       title: "Misho the Bat and the Lost Ones",
       location: `<p>📍 Friendship Square</p>
-            <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
+            <img src="images/Šišmiš_Mišo.png" alt="Imahe of the bat Misho" class="hero-image">`,
       story: `
         <p>I am Misho, a bat from Brijuni.<br>
         I've been living here for years, along with many other interesting creatures.<br>
@@ -89,8 +89,7 @@ const LOCATIONS = {
     it: {
       title: "Il pipistrello Misho e gli scomparsi",
       location: `<p>📍 Piazza dell'amicizia</p>
-                  <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
-      <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">,
+                  <img src="images/Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
       story: `
         <p>Sono Mišo, un pipistrello di Brioni.<br>
         Vivo qui da anni, insieme a molte altre creature interessanti.<br>
@@ -132,7 +131,7 @@ const LOCATIONS = {
     de: {
       title: "Die Fledermaus Misho und die Vermissten",
       location: `<p>📍 Platz der Freundschaft</p>
-                        <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
+                        <img src="images/Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
       story: `
         <p>Ich bin Mišo, eine Fledermaus von Brijuni.<br>
         Ich lebe schon seit Jahren hier, zusammen mit vielen anderen interessanten Geschöpfen.<br>
@@ -176,7 +175,7 @@ const LOCATIONS = {
     hr: {
       title: "Šišmiš Mišo i izgubljeni",
       location: `<p>📍 Ribnjak</p>
-            <img src="Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,`,
+            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
       story: `<p>Mišo je stigao do Ribnjaka.</p>
               <p><strong>Za one koji žele znati više</strong></p>
               Nitko još ništa ne zna ...
@@ -204,7 +203,8 @@ const LOCATIONS = {
 
     en: {
       title: "Misho the Bat and the Lost Ones",
-      location: "📍 Fishpond",
+      location: `<p>📍 Fishpond</p>
+            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
       story: `<p>Misho arrived at the Fishpond.</p>
               <p><strong>For those who want to know more</strong></p>
               <p>Nobody knows...</p>
@@ -232,7 +232,8 @@ const LOCATIONS = {
 
      it: {
       title: "Il pipistrello Misho e gli scomparsi",
-      location: "📍 Peschiera",
+      location: `<p>📍 Peschiera</p>
+            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
       story: `
         <p>Misho arrivò alla Peschiera.</p>
 
@@ -264,7 +265,8 @@ const LOCATIONS = {
     },
     de: {
       title: "Die Fledermaus Misho und die Vermissten",
-      location: "📍 Fischteich",
+      location: `<p>📍 Fischteich</p>
+            <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
       story: `
         <p>Misho kam am Fischteich an.</p>
 
@@ -293,6 +295,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
