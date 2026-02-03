@@ -26,7 +26,7 @@ const LOCATIONS = {
       `,
       hintBtn: "Trebam pomoć",
       hint: "⛳ Blizu golfereske ⑫.",
-      mapBtn: "Treba mi točna lokacija",
+      mapBtn: "Stvarno ne znam gdje ići, treba mi mapa s lokacijom",
       mapLoading: "⏳ Učitavanje karte...",
       mapOpened: "Mapa otvorena ✓",
       mapLocation: "Ribnjak",
@@ -44,10 +44,10 @@ const LOCATIONS = {
     },
 
     en: {
-      title: "Miso the Bat and the Lost Ones",
+      title: "Misho the Bat and the Lost Ones",
       location: "📍 Friendship Square",
       story: `
-        <p>I am Mišo, a bat from Brijuni.<br>
+        <p>I am Misho, a bat from Brijuni.<br>
         I've been living here for years, along with many other interesting creatures.<br>
         But tonight my friends are not coming...<br>
         I set out to look for them, but on the island I also encounter strange, unknown creatures.<br>
@@ -67,7 +67,7 @@ const LOCATIONS = {
       `,
       hintBtn: "I need a hint",
       hint: "⛳ Near the golf hole number seven.",
-      mapBtn: "I need the correct location",
+      mapBtn: "I really don't know where to go, I need a map with the location",
       mapLoading: "⏳ Loading map...",
       mapOpened: "Map opened ✓",
       mapLocation: "Fishpond",
@@ -85,28 +85,30 @@ const LOCATIONS = {
     },
 
     it: {
-      title: "Il pipistrello Miso e gli scomparsi",
+      title: "Il pipistrello Misho e gli scomparsi",
       location: "📍 Piazza dell'amicizia",
       story: `
-        <p>Miso vive alle Brioni, un luogo ideale per
-        <strong>18 specie di pipistrelli</strong>.</p>
+        <p>Sono Mišo, un pipistrello di Brioni.<br>
+        Vivo qui da anni, insieme a molte altre creature interessanti.<br>
+        Ma stasera i miei amici non si trovano...<br>
+        Sono partito alla loro ricerca, ma sull'isola incontro anche strane creature sconosciute.<br>
+        Mi aiuteresti a scoprire chi altro appartiene a Brioni?</p>
 
-        <p>Silenzio e natura offrono rifugio sicuro.</p>
-
-        <p>Ma qualcosa non va: compaiono specie invasive.</p>
-
-        <p>Aiuta Miso a scoprire cosa sta succedendo.</p>
+        <p><strong>Per chi vuole saperne di più</strong></p>
+        <p>I pipistrelli sono oggetto di studio e monitoraggio a Brioni dal 2010. L'isolamento di questo arcipelago e le restrizioni imposte dalle regole di comportamento del Parco Nazionale hanno reso Brioni un luogo estremamente adatto alla vita o alla residenza occasionale di diverse specie di pipistrelli. La pace e la libertà dall'interferenza umana, una quantità sufficiente di cibo (insetti notturni) e un'ampia varietà di habitat per il riposo diurno sono le ragioni per cui in quest'area relativamente piccola si possono trovare ben 18 specie diverse di questi animali utili e in via di estinzione. Tutte le specie di pipistrelli in Europa sono protette da convenzioni internazionali. Molte specie che vivono a Brioni sono nell'elenco delle specie in via di estinzione. Durante le ricerche del 2014, è stato stabilito che Brioni è un sito importante per la riproduzione del grande pipistrello notturno (<i>Nyctalus lasiopterus</i>), che in precedenza era considerato quasi estinto nella Repubblica di Croazia. </p>
       `,
       riddleTitle: "🔍 Indovinello",
       riddleText: `
-        Non sono il mare, anche se un tempo lo ero.<br>
-        Non sono un lago, ma respiro tranquillo.<br>
-        Un ponte mi divide e lo sguardo da lì conduce oltre.<br>
-        <strong>Qual è la prossima tappa?</strong>
+        Volo di notte sopra l'acqua, alla ricerca dei miei amici.
+        Dove si nascondono i giovani pesci e la gente non nuota mai?
+        Separati dal mare, anche se un tempo erano un tutt'uno.
+        Non è un lago, ma respira pacificamente.
+        Il ponte lo divide e la vista da lì si estende oltre.
+        <p><strong>Dove troverà amici Miško?</strong></p>
       `,
       hintBtn: "Ho bisogno di un aiuto",
       hint: "⛳ Vicino alla buca numero sette del golf.",
-      mapBtn: "Ho bisogno del luogo esatto",
+      mapBtn: "Non so davvero dove andare, ho bisogno di una mappa con la posizione",
       mapLoading: "⏳ Caricamento mappa...",
       mapOpened: "Mappa aperta ✓",
       mapLocation: "Peschiera",
@@ -124,28 +126,30 @@ const LOCATIONS = {
     },
 
     de: {
-      title: "Die Fledermaus Miso und die Vermissten",
+      title: "Die Fledermaus Misho und die Vermissten",
       location: "📍 Platz der Freundschaft",
       story: `
-        <p>Miso lebt auf den Brijuni-Inseln, Heimat von
-        <strong>18 Fledermausarten</strong>.</p>
+        <p>Ich bin Mišo, eine Fledermaus von Brijuni.<br>
+        Ich lebe schon seit Jahren hier, zusammen mit vielen anderen interessanten Geschöpfen.<br>
+        Aber heute Abend kommen meine Freunde nicht...<br>
+        Ich mache mich auf die Suche nach ihnen, doch auf der Insel begegne ich auch seltsamen, unbekannten Kreaturen.<br>
+        Hilfst du mir herauszufinden, wer sonst noch zu Brijuni gehört?</p>
 
-        <p>Ruhe und Natur bieten ideale Lebensbedingungen.</p>
-
-        <p>Doch invasive Arten bedrohen das Gleichgewicht.</p>
-
-        <p>Hilf Miso, die Wahrheit zu finden.</p>
+        <p><strong>Für alle, die mehr wissen möchten</strong></p>
+        <p>Seit 2010 werden Fledermäuse auf Brijuni erforscht und beobachtet. Die Isolation dieses Archipels und die im Nationalpark geltenden Verhaltensregeln machen Brijuni zu einem äußerst geeigneten Lebensraum für verschiedene Fledermausarten. Ruhe und ungestörte Natur, ein ausreichendes Nahrungsangebot (nachtaktive Insekten) und eine große Vielfalt an Lebensräumen für die Tagesruhe sind die Gründe, warum auf diesem relativ kleinen Gebiet bis zu 18 verschiedene Arten dieser nützlichen und bedrohten Tiere vorkommen. Alle Fledermausarten Europas sind durch internationale Übereinkommen geschützt. Viele der auf Brijuni lebenden Arten stehen auf der Liste der gefährdeten Arten. Untersuchungen im Jahr 2014 ergaben, dass Brijuni ein wichtiger Brutplatz für die Große Nachtfledermaus (Nyctalus lasiopterus) ist, die in Kroatien zuvor als fast ausgestorben galt.</p>
       `,
       riddleTitle: "🔍 Rätsel",
       riddleText: `
-        Ich bin nicht das Meer, obwohl ich es einst war.<br>
-        Ich bin kein See, doch ich atme ruhig.<br>
-        Eine Brücke teilt mich, und der Blick von ihr führt weiter.<br>
-        <strong>Was ist der nächste Ort?</strong>
+        Nachts fliege ich übers Wasser und suche meine Freunde.<br>
+        Wo verstecken sich die jungen Fische, und wo schwimmen die Menschen nie?<br>
+        Vom Meer getrennt, obwohl sie einst eins waren.<br>
+        Es ist kein See, doch er atmet friedlich.<br>
+        Die Brücke teilt den Weg, und der Blick von ihr führt weiter.<br>
+        <p><strong>Wo wird Miško Freunde finden?</strong></p>
       `,
       hintBtn: "Ich brauche einen Hinweis",
       hint: "⛳ In der Nähe von Golfbahn Nummer sieben.",
-      mapBtn: "Ich brauche den richtigen Standort.",
+      mapBtn: "Ich weiß wirklich nicht, wohin ich gehen soll, ich brauche eine Karte mit dem Standort.",
       mapLoading: "⏳ Karte wird geladen...",
       mapOpened: "Karte geöffnet ✓",
       mapLocation: "Fischteich",
@@ -172,7 +176,7 @@ const LOCATIONS = {
       riddleText: `Smisli tekst...`,
       hintBtn: "Trebam pomoć",
       hint: "Smisli hint...",
-      mapBtn: "Treba mi točna lokacija",
+      mapBtn: "Stvarno ne znam gdje ići, treba mi mapa s lokacijom",
       mapLoading: "⏳ Učitavanje karte...",
       mapOpened: "Mapa otvorena ✓",
       mapLocation: "Ribnjak",
@@ -190,14 +194,14 @@ const LOCATIONS = {
     },
 
     en: {
-      title: "Miso the Bat and the Lost Ones",
+      title: "Misho the Bat and the Lost Ones",
       location: "📍 Fishpond",
-      story: `<p>Miso arrived at the Fishpond.</p>`,
+      story: `<p>Misho arrived at the Fishpond.</p>`,
       riddleTitle: "🔍 Riddle",
       riddleText: `Make up a riddle...`,
       hintBtn: "I need a hint",
       hint: "Make up a hint...",
-      mapBtn: "I need the correct location",
+      mapBtn: "I really don't know where to go, I need a map with the location",
       mapLoading: "⏳ Loading map...",
       mapOpened: "Map opened ✓",
       mapLocation: "Fishpond",
@@ -215,5 +219,6 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
