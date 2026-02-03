@@ -12,8 +12,7 @@ const LOCATIONS = {
         Krenuo sam ih potražiti, ali na otoku susrećem i čudna, nepoznata bića.<br>
         Hoćeš li mi pomoći pronaći tko još pripada Brijunima?</p> `,
       infoTitle: "Za one koji žele znati više",
-      infoText:   `Šišmiši se na Brijunima istražuju i prate od 2010. godine. Izoliranost ovog otočja i ograničenja koja nalažu pravila ponašanja u Nacionalnom parku učinili su Brijune izrazito pogodnim mjestom za život odnosno povremeno obitavanje različitih vrsta šišmiša. Mir i neometanje od ljudi, dovoljna količina hrane (noćnih kukaca) te širok izbor različitih staništa za dnevni odmor razlozi su zbog kojih se na ovom relativno malom području može susresti čak 18 različitih vrsta ovih korisnih i ugroženih životinjica. Sve su vrste šišmiša u Europi zaštićene međunarodnim konvencijama. Mnoge vrste koje obitavaju na Brijunima na popisu su ugroženih vrsta. Tijekom istraživanja 2014. godine utvrđeno je da su Brijuni lokacija važna za razmnožavanje vrste veliki večernjak (<i>Nyctalus lasiopterus</i>), koja je prije toga smatrana gotovo izumrlom za područje RH.
-      `,
+      infoText: `Šišmiši se na Brijunima istražuju i prate od 2010. godine. Izoliranost ovog otočja i ograničenja koja nalažu pravila ponašanja u Nacionalnom parku učinili su Brijune izrazito pogodnim mjestom za život odnosno povremeno obitavanje različitih vrsta šišmiša. Mir i neometanje od ljudi, dovoljna količina hrane (noćnih kukaca) te širok izbor različitih staništa za dnevni odmor razlozi su zbog kojih se na ovom relativno malom području može susresti čak 18 različitih vrsta ovih korisnih i ugroženih životinjica. Sve su vrste šišmiša u Europi zaštićene međunarodnim konvencijama. Mnoge vrste koje obitavaju na Brijunima na popisu su ugroženih vrsta. Tijekom istraživanja 2014. godine utvrđeno je da su Brijuni lokacija važna za razmnožavanje vrste veliki večernjak (<i>Nyctalus lasiopterus</i>), koja je prije toga smatrana gotovo izumrlom za područje RH.`,
       //https://www.np-brijuni.hr/hr/brijuni/prirodna-bastina/otocna-fauna
       riddleTitle: "🔍 Zagonetka",
       riddleText: `
@@ -294,6 +293,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
