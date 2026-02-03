@@ -2,7 +2,8 @@ const LOCATIONS = {
   start: {
     hr: {
       title: "Šišmiš Mišo i izgubljeni",
-      location: "📍 Trg prijateljstva",
+      location: `<p>📍 Trg prijateljstva</p>
+      <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
       story: `
 
         <p>Ja sam Mišo, šišmiš s Brijuna.<br>
@@ -45,7 +46,8 @@ const LOCATIONS = {
 
     en: {
       title: "Misho the Bat and the Lost Ones",
-      location: "📍 Friendship Square",
+      location: `<p>📍 Friendship Square</p>
+            <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
       story: `
         <p>I am Misho, a bat from Brijuni.<br>
         I've been living here for years, along with many other interesting creatures.<br>
@@ -66,7 +68,7 @@ const LOCATIONS = {
         <p><strong>Where will Miško find friends?</strong></p>
       `,
       hintBtn: "I need a hint",
-      hint: "⛳ Near the golf hole number seven.",
+      hint: "⛳ Near the golf hole number ⑫.",
       mapBtn: "I really don't know where to go, I need a map with the location",
       mapLoading: "⏳ Loading map...",
       mapOpened: "Map opened ✓",
@@ -86,7 +88,9 @@ const LOCATIONS = {
 
     it: {
       title: "Il pipistrello Misho e gli scomparsi",
-      location: "📍 Piazza dell'amicizia",
+      location: `<p>📍 Piazza dell'amicizia</p>
+                  <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
+      <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">,
       story: `
         <p>Sono Mišo, un pipistrello di Brioni.<br>
         Vivo qui da anni, insieme a molte altre creature interessanti.<br>
@@ -99,15 +103,15 @@ const LOCATIONS = {
       `,
       riddleTitle: "🔍 Indovinello",
       riddleText: `
-        Volo di notte sopra l'acqua, alla ricerca dei miei amici.
-        Dove si nascondono i giovani pesci e la gente non nuota mai?
-        Separati dal mare, anche se un tempo erano un tutt'uno.
-        Non è un lago, ma respira pacificamente.
-        Il ponte lo divide e la vista da lì si estende oltre.
+        Volo di notte sopra l'acqua, alla ricerca dei miei amici.<br>
+        Dove si nascondono i giovani pesci e la gente non nuota mai?<br>
+        Separati dal mare, anche se un tempo erano un tutt'uno.<br>
+        Non è un lago, ma respira pacificamente.<br>
+        Il ponte lo divide e la vista da lì si estende oltre.<br>
         <p><strong>Dove troverà amici Miško?</strong></p>
       `,
       hintBtn: "Ho bisogno di un aiuto",
-      hint: "⛳ Vicino alla buca numero sette del golf.",
+      hint: "⛳ Vicino alla buca numero ⑫ del golf.",
       mapBtn: "Non so davvero dove andare, ho bisogno di una mappa con la posizione",
       mapLoading: "⏳ Caricamento mappa...",
       mapOpened: "Mappa aperta ✓",
@@ -127,7 +131,8 @@ const LOCATIONS = {
 
     de: {
       title: "Die Fledermaus Misho und die Vermissten",
-      location: "📍 Platz der Freundschaft",
+      location: `<p>📍 Platz der Freundschaft</p>
+                        <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">`,
       story: `
         <p>Ich bin Mišo, eine Fledermaus von Brijuni.<br>
         Ich lebe schon seit Jahren hier, zusammen mit vielen anderen interessanten Geschöpfen.<br>
@@ -148,7 +153,7 @@ const LOCATIONS = {
         <p><strong>Wo wird Miško Freunde finden?</strong></p>
       `,
       hintBtn: "Ich brauche einen Hinweis",
-      hint: "⛳ In der Nähe von Golfbahn Nummer sieben.",
+      hint: "⛳ In der Nähe von Golfbahn Nummer ⑫.",
       mapBtn: "Ich weiß wirklich nicht, wohin ich gehen soll, ich brauche eine Karte mit dem Standort.",
       mapLoading: "⏳ Karte wird geladen...",
       mapOpened: "Karte geöffnet ✓",
@@ -170,8 +175,12 @@ const LOCATIONS = {
   ribnjak: {
     hr: {
       title: "Šišmiš Mišo i izgubljeni",
-      location: "📍 Ribnjak",
-      story: `<p>Mišo je stigao do Ribnjaka.</p>`,
+      location: `<p>📍 Ribnjak</p>
+            <img src="Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,`,
+      story: `<p>Mišo je stigao do Ribnjaka.</p>
+              <p><strong>Za one koji žele znati više</strong></p>
+              Nitko još ništa ne zna ...
+        `,
       riddleTitle: "🔍 Zagonetka",
       riddleText: `Smisli tekst...`,
       hintBtn: "Trebam pomoć",
@@ -179,7 +188,7 @@ const LOCATIONS = {
       mapBtn: "Stvarno ne znam gdje ići, treba mi mapa s lokacijom",
       mapLoading: "⏳ Učitavanje karte...",
       mapOpened: "Mapa otvorena ✓",
-      mapLocation: "Ribnjak",
+      mapLocation: "Nepoznato",
       map: `
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
@@ -196,7 +205,10 @@ const LOCATIONS = {
     en: {
       title: "Misho the Bat and the Lost Ones",
       location: "📍 Fishpond",
-      story: `<p>Misho arrived at the Fishpond.</p>`,
+      story: `<p>Misho arrived at the Fishpond.</p>
+              <p><strong>For those who want to know more</strong></p>
+              <p>Nobody knows...</p>
+      `,
       riddleTitle: "🔍 Riddle",
       riddleText: `Make up a riddle...`,
       hintBtn: "I need a hint",
@@ -204,7 +216,69 @@ const LOCATIONS = {
       mapBtn: "I really don't know where to go, I need a map with the location",
       mapLoading: "⏳ Loading map...",
       mapOpened: "Map opened ✓",
-      mapLocation: "Fishpond",
+      mapLocation: "Unknown",
+      map: `
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+          width="600"
+          height="650"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      `
+    },
+
+     it: {
+      title: "Il pipistrello Misho e gli scomparsi",
+      location: "📍 Peschiera",
+      story: `
+        <p>Misho arrivò alla Peschiera.</p>
+
+        <p><strong>Per chi vuole saperne di più</strong></p>
+        <p>Non si sà</p>
+      `,
+      riddleTitle: "🔍 Indovinello",
+      riddleText: `
+        Inventa un indovinello.
+        <p><strong>Dove troverà amici Miško?</strong></p>
+      `,
+      hintBtn: "Ho bisogno di un aiuto",
+      hint: "Inventa un suggerimento...",
+      mapBtn: "Non so davvero dove andare, ho bisogno di una mappa con la posizione",
+      mapLoading: "⏳ Caricamento mappa...",
+      mapOpened: "Mappa aperta ✓",
+      mapLocation: "Sconosciuto",
+      map: `
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+          width="600"
+          height="650"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      `
+    },
+    de: {
+      title: "Die Fledermaus Misho und die Vermissten",
+      location: "📍 Fischteich",
+      story: `
+        <p>Misho kam am Fischteich an.</p>
+
+        <p><strong>Für alle, die mehr wissen möchten</strong></p>
+        <p>Niemand weiß es …</p>
+      `,
+      riddleTitle: "🔍 Rätsel",
+      riddleText: `Erfinde ein Rätsel...`,
+      hintBtn: "Ich brauche einen Hinweis",
+      hint: "Erfinde einen Hinweis...",
+      mapBtn: "Ich weiß wirklich nicht, wohin ich gehen soll, ich brauche eine Karte mit dem Standort.",
+      mapLoading: "⏳ Karte wird geladen...",
+      mapOpened: "Karte geöffnet ✓",
+      mapLocation: "Unbekannt",
       map: `
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
@@ -219,6 +293,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
