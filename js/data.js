@@ -5,20 +5,22 @@ const LOCATIONS = {
       location: "📍 Trg prijateljstva",
       story: `
 
-        <p>Ja sam Mišo, šišmiš s Brijuna.<brY
-        Ovdje živim već godinama, zajedno s mnogim drugim noćnim letačima.<br>
+        <p>Ja sam Mišo, šišmiš s Brijuna.<br>
+        Ovdje živim već godinama, zajedno s mnogim drugim zanimljivim stvorenjima.<br>
         No ove noći moji prijatelji se ne javljaju…<br>
         Krenuo sam ih potražiti, ali na otoku susrećem i čudna, nepoznata bića.<br>
         Hoćeš li mi pomoći pronaći tko još pripada Brijunima?</p>
 
-        <p><strong>Za one koji žele znati više</strong></p>
+        <p><strong>Za one koji žele znati više</strong></p> //https://www.np-brijuni.hr/hr/brijuni/prirodna-bastina/otocna-fauna
         <p>Šišmiši se na Brijunima istražuju i prate od 2010. godine. Izoliranost ovog otočja i ograničenja koja nalažu pravila ponašanja u Nacionalnom parku učinili su Brijune izrazito pogodnim mjestom za život odnosno povremeno obitavanje različitih vrsta šišmiša. Mir i neometanje od ljudi, dovoljna količina hrane (noćnih kukaca) te širok izbor različitih staništa za dnevni odmor razlozi su zbog kojih se na ovom relativno malom području može susresti čak 18 različitih vrsta ovih korisnih i ugroženih životinjica. Sve su vrste šišmiša u Europi zaštićene međunarodnim konvencijama. Mnoge vrste koje obitavaju na Brijunima na popisu su ugroženih vrsta. Tijekom istraživanja 2014. godine utvrđeno je da su Brijuni lokacija važna za razmnožavanje vrste veliki večernjak (Nyctalus lasiopterus), koja je prije toga smatrana gotovo izumrlom za područje RH. </p>
       `,
       riddleTitle: "🔍 Zagonetka",
       riddleText: `
-        Nisam more, iako sam to nekad bio.<br>
-        Nisam jezero, ali mirno dišem.<br>
-        Most me dijeli, a pogled s njega vodi dalje.<br>
+        Letim noću, prijatelje tražim uz vodu.<br>
+        Gdje se ribe skrivaju, a ljudi se ne kupaju?<br>
+        Odvojeno od mora, iako su nekada bili jedno.<br>
+        Nije jezero, ali mirno diše.<br>
+        Most dijeli, a pogled s njega vodi dalje.<br>
         <p><strong>Gdje će Miško pronaći prijatelje?</strong></p>
       `,
       hintBtn: "Trebam pomoć",
@@ -211,3 +213,4 @@ const LOCATIONS = {
     }
   }
 };
+
