@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(180deg, #eef6f6, #ffffff);
+  color: #1a1a1a;
+}
+
+.language-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  font-weight: 600;
+}
+
+.language-bar span {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.language-bar span:hover {
+  opacity: 1;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3.2rem;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+
+
+.hero-image {
+  width: 20%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 16px auto 24px;
+  border-radius: 12px;
+}
+
+
+.story {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.riddle {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px dashed #ccc;
+}
+
+.riddle h3 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+}
+
+.answer {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #065da9;
+}
+
+.hint-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hint-btn {
+  background: none;
+  border: 2px dashed #2f6b4f;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #2f6b4f;
+  transition: all 0.3s ease;
+}
+
+.hint-btn:hover {
+  background-color: #2f6b4f;
+  color: white;
+}
+
+.hint-text {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #444;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.hint-text.show {
+  opacity: 1;
+  max-height: 100px;
+}
+
+
+.map-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.map-btn {
+  background: none;
+  border: 2px dashed #2f6b4f;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #2f6b4f;
+  transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+  background-color: #2f6b4f;
+  color: white;
+}
+
+.map-container.show {
+  opacity: 1;
+  max-height: 650px;
+}
+
+.map-location{
+  display:none;
+  margin-top:20px;
+  font-size:1.4rem;
+}
+
+.map-location.show{ display:block; }
+
+.map-text.show + .map-location{
+  display:block;
+}
+
+/* MAP CARD */
+.map-card{
+  margin-top:20px;
+  padding:18px;
+  border-radius:18px;
+  background:#ffffff;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  transition:all .3s ease;
+}
+
+/* LOCATION TITLE */
+.map-location{
+  display:none;
+  font-family:'Amatic SC',cursive;
+  font-size:2rem;
+  margin-bottom:12px;
+  color:#2f6b4f;
+}
+
+.map-location.show{
+  display:block;
+}
+
+
+/* LOADING */
+.map-loading{
+  display:none;
+  margin-top:15px;
+  font-size:1rem;
+  color:#666;
+  animation:pulse 1.2s infinite;
+}
+
+.map-loading.show{
+  display:block;
+}
+
+@keyframes pulse{
+  0%{opacity:.3}
+  50%{opacity:1}
+  100%{opacity:.3}
+}
+
+.map-text{
+  opacity:0;
+  transform:translateY(10px);
+  max-height:0;
+  overflow:hidden;
+  transition:all .5s ease;
+}
+
+.map-text.show{
+  opacity:1;
+  transform:translateY(0);
+  max-height:900px;
+}
+
+.map-location{
+  display:none;
+  font-family:'Amatic SC',cursive;
+  font-size:2rem;
+  margin-bottom:12px;
+  color:#2f6b4f;
+}
+
+.map-location.show{
+  display:block;
+}
+
+
+.map-btn.opened{
+  background:#2f6b4f;
+  color:#fff;
+  border-style:solid;
+}
+
+.map-loader{
+  display:none;
+  height:220px;
+  margin-top:20px;
+  border-radius:18px;
+  background:linear-gradient(
+    110deg,
+    #f0f0f0 8%,
+    #ffffff 18%,
+    #f0f0f0 33%
+  );
+  background-size:200% 100%;
+  animation:shimmer 1.4s infinite linear;
+}
+
+.map-loader.show{
+  display:block;
+}
+
+@keyframes shimmer{
+  to{
+    background-position:-200% 0;
+  }
+}
+
+.map-btn.loading{
+  animation:pulse 1s infinite ease-in-out;
+}
+
+.map-btn.loading{
+  pointer-events:none;
+  opacity:0.7;
+}
+
+
+@keyframes pulse{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.05); }
+  100%{ transform:scale(1); }
+}

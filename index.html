@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Šišmiš Mišo i izgubljeni</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LANGUAGE SELECT -->
+  <div class="language-bar">
+    <span onclick="setLang('hr')">HR</span>
+    <span onclick="setLang('en')">EN</span>
+    <span onclick="setLang('it')">IT</span>
+    <span onclick="setLang('de')">DE</span>
+  </div>
+
+  <main class="content">
+
+    <h1 id="title">Šišmiš Mišo i izgubljeni</h1>
+    <h2 id="location">📍 Trg prijateljstva</h2>
+
+    <img src="Šišmiš_Mišo.png" alt="Slika šišmiša Miša" class="hero-image">
+
+    <div class="story" id="story"></div>
+
+    <!-- RIDDLE -->
+    <div class="riddle">
+      <h3 id="riddleTitle">🔍 Zagonetka</h3>
+      <p id="riddleText"></p>
+     <!-- <p class="answer" id="riddleAnswer"></p> -->
+    </div>
+
+    <div class="hint-container">
+      <button class="hint-btn" onclick="toggleHint()" id="hintBtn"></button>
+      <p id="hintText" class="hint-text"></p>
+    </div>
+
+  <div class="map-container map-card">
+    <button class="map-btn" onclick="toggleMap()" id="mapBtn"></button>
+    <div id="mapLoading" class="map-loading"></div>
+    <h3 id="mapLocation" class="map-location"></h3>
+    <div id="mapLoader" class="map-loader"></div>
+    <div id="mapContainer" class="map-text"></div>
+  </div>
+
+
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
