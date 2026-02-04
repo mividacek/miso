@@ -175,7 +175,7 @@ const LOCATIONS = {
       story: `<p>Mišo je stigao do Ribnjaka.</p>
         `,
       infoTitle: "Za one koji žele znati više",
-      infoText: ``,
+      infoText: `Područje Ribnjaka (uvala Turanj, Val Torre) je jedno od područja najstrože zaštite na Velikom Brijunu, na tom području nalaze se ostaci zidova rimskih struktura koje je prvi puta uočio i zabilježio Anton Gnirs. Ovaj lokalitet još uvijek nije istražen, međutim pretpostavka je da se radi o rustičnoj vili vezanoj za ribnjak. Uvala Turanj u rimsko je doba bila plića za oko jedan metar, imala prirodni ribnjak kojega se moglo vrlo lako zatvoriti i koji je imao kontrolirani dotok svježe morske vode. Danas je važno stanište za ribu, zaklonjeno stanište za morske alge, ali i važno područje za ptice, npr. hranjenje vodomara. Na tom području i danas ima puno mlađi koja se tu hrani i odrasta da bi onda zaplivala u dublje more. Kako bi zaštitili povijest i ne uznemiravali ribu unutar tog područja kupanje je strogo zabranjeno.`,
       //linkaj izvor teksta ovdje
       
       riddleTitle: "🔍 Zagonetka",
@@ -297,6 +297,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
