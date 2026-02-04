@@ -242,7 +242,8 @@ const LOCATIONS = {
       riddleText: `
       <p>I am not a horse,<br>
       although I may look like one.<br>
-      People say I am stubborn, but I just stand my ground.</p>
+      People say I am stubborn,<br>
+      but I just stand my ground.</p>
 
       <p>These fields are my home;<br>
       I have borne the weight of land and people.</p>
@@ -276,9 +277,11 @@ const LOCATIONS = {
             <img src="images/Plavi_rak.png" alt="Immagine del granchio blu" class="hero-image">`,
       story: `
         <p>Misho arrivò alla Peschiera.</p>
-        <p>Sin dall'antichità, i pesci hanno prosperato in questo rifugio protetto, gli uccelli sono sopraggiunti per cibarsene e noi l'abbiamo preservata.<br>
-        Ma tra i pesci c'è un granchio blu, uno straniero arrivato da regioni più calde.<br>
-        Si riproduce e adatta rapidamente, divora più di quanto lo stagno possa sopportare, lasciando agli abitanti locali meno cibo e spazio.</p>
+        <p>Sin dall'antichità, i pesci hanno prosperato in questo rifugio protetto,
+        gli uccelli sono sopraggiunti per cibarsene e noi l'abbiamo preservata.<bR
+        Ma tra i pesci c'è un granchio blu, uno straniero arrivato da regioni più calde.
+        Si riproduce e adatta rapidamente, divora più di quanto lo stagno possa sopportare,
+        lasciando agli abitanti locali meno cibo e spazio.</p>
 
         <p>Misho non ha trovato un amico qui, ma una minaccia per l'equilibrio naturale.</p>  
 
@@ -375,6 +378,7 @@ Wo kann Mišo einen Freund finden?
     }
   }
 };
+
 
 
 
