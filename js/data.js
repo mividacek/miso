@@ -33,7 +33,7 @@ const LOCATIONS = {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -73,7 +73,7 @@ const LOCATIONS = {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -115,7 +115,7 @@ const LOCATIONS = {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -157,7 +157,7 @@ const LOCATIONS = {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -173,24 +173,46 @@ const LOCATIONS = {
       location: `<p>📍 Ribnjak</p>
             <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
       story: `<p>Mišo je stigao do Ribnjaka.</p>
+              <p>Ovdje još od daleke prošlosti ribe rastu u zaklonu, ptice dolaze po hranu, a mi ovo područje štitimo.<br>
+              No među ribama se skriva plavi rak – stranac koji je ovamo stigao iz toplijih krajeva.<br>
+              Brzo se razmnožava, prilagođava i jede više nego što ribnjak može podnijeti.<br>
+              Zbog njega domaći stanovnici imaju manje hrane i prostora.</p>
+
+              <p>Mišo ovdje nije pronašao prijatelja.<br>
+              Pronašao je prijetnju prirodnoj ravnoteži.</p>
+
+              <p>Zato mora nastaviti potragu – jer pravi prijatelji pomažu, a ne uzimaju.</p>
         `,
       infoTitle: "Za one koji žele znati više",
       infoText: `Područje Ribnjaka (uvala Turanj, Val Torre) je jedno od područja najstrože zaštite na Velikom Brijunu, na tom području nalaze se ostaci zidova rimskih struktura koje je prvi puta uočio i zabilježio Anton Gnirs. Ovaj lokalitet još uvijek nije istražen, međutim pretpostavka je da se radi o rustičnoj vili vezanoj za ribnjak. Uvala Turanj u rimsko je doba bila plića za oko jedan metar, imala prirodni ribnjak kojega se moglo vrlo lako zatvoriti i koji je imao kontrolirani dotok svježe morske vode. Danas je važno stanište za ribu, zaklonjeno stanište za morske alge, ali i važno područje za ptice, npr. hranjenje vodomara. Na tom području i danas ima puno mlađi koja se tu hrani i odrasta da bi onda zaplivala u dublje more. Kako bi zaštitili povijest i ne uznemiravali ribu unutar tog područja kupanje je strogo zabranjeno.`,
-      //linkaj izvor teksta ovdje
+      //https://www.np-brijuni.hr/hr/aktivnosti-parka/podrucja-na-velikom-brijunu-gdje-kupanje-nije-dozvoljeno
       
       riddleTitle: "🔍 Zagonetka",
-      riddleText: `Smisli tekst...`,
+      riddleText: 
+        `<p>Nisam konj, iako mi sliče.<br>
+        Tvrdoglav sam, kažu ljudi,<br>
+        ali ja samo stojim čvrsto na svome.</p>
+
+        <p>Ovi krajevi su moj dom,<br>
+        nosio sam teret zemlje i ljudi.</p>
+
+        <p>Ovdje se susreću svjetovi –<br>
+        oni koji su došli<br
+        i oni koji su oduvijek ostali.<p>
+
+        <p><strong>Gdje Mišo može pronaći prijatelja?</strong><p>`,
+      
       hintBtn: "Trebam pomoć",
-      hint: "Smisli hint...",
+      hint: "Ovdje živi i najveća stanovnica otoka 🐘",
       mapBtn: "Stvarno ne znam gdje ići, treba mi mapa s lokacijom",
       mapLoading: "⏳ Učitavanje karte...",
       mapOpened: "Mapa otvorena ✓",
-      mapLocation: "Nepoznato",
+      mapLocation: "Safari park",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2615.2983214472365!2d13.741531!3d44.924076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI2LjciTiAxM8KwNDQnMjkuNSJF!5e1!3m2!1shr!2shr!4v1770211146667!5m2!1shr!2shr"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -204,24 +226,42 @@ const LOCATIONS = {
       location: `<p>📍 Fishpond</p>
             <img src="images/Plavi_rak.png" alt="Picture of the blue crab" class="hero-image">`,
       story: `<p>Misho arrived at the Fishpond.</p>
+      <p>Since ancient times, fish have grown in this sheltered area, birds have come to feed here, and we have protected it.<br>
+      But among the fish is a blue crab, a stranger who arrived from warmer regions.<br>
+      It reproduces and adapts quickly and eats more than the pond can handle, leaving the local inhabitants with less food and space. </p>
+
+      <p>Misho has not found a friend here; he has found a threat to the natural balance.</p>
+
+      <p>That is why he must continue his search – true friends help, they don't take.</p>
       `,
 
       infoTitle: "For those who want to know more",
       infoText: `The Fishpond area (Turanj Bay, Val Torre) is one of the most strictly protected areas on Veliki Brijuni, in this area there are remains of walls of Roman structures that were first noticed and recorded by Anton Gnirs. This site has not yet been explored, however, the assumption is that it is a rustic villa connected to the pond. Turanj Bay was shallower by about one meter in Roman times, had a natural pond that could be easily closed and which had a controlled inflow of fresh sea water. Today it is an important habitat for fish, a sheltered habitat for seaweed, but also an important area for birds, e.g. kingfishers feeding. There are still many young in this area that feed and grow there and then swim into the deeper sea. In order to protect history and not disturb the fish within this area, swimming is strictly prohibited.`,
       
       riddleTitle: "🔍 Riddle",
-      riddleText: `Make up a riddle...`,
+      riddleText: `
+      <p>I am not a horse,<br>
+      although I may look like one.<br>
+      People say I am stubborn, but I just stand my ground.</p>
+
+      <p>These fields are my home;<br>
+      I have borne the weight of land and people.</p>
+
+      <p>Here worlds meet – those who came<br>
+      and those who have always belonged.</p>
+
+      <p><strong>Where can Misho find a friend?</strong></p>`,
       hintBtn: "I need a hint",
-      hint: "Make up a hint...",
+      hint: "The island's largest inhabitant lives here too 🐘",
       mapBtn: "I really don't know where to go, I need a map with the location",
       mapLoading: "⏳ Loading map...",
       mapOpened: "Map opened ✓",
-      mapLocation: "Unknown",
+      mapLocation: "Safari park",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2615.2983214472365!2d13.741531!3d44.924076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI2LjciTiAxM8KwNDQnMjkuNSJF!5e1!3m2!1shr!2shr!4v1770211146667!5m2!1shr!2shr"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -236,27 +276,44 @@ const LOCATIONS = {
             <img src="images/Plavi_rak.png" alt="Immagine del granchio blu" class="hero-image">`,
       story: `
         <p>Misho arrivò alla Peschiera.</p>
-      `,
+        <p>Sin dall'antichità, i pesci hanno prosperato in questo rifugio protetto, gli uccelli sono sopraggiunti per cibarsene e noi l'abbiamo preservata.<br>
+        Ma tra i pesci c'è un granchio blu, uno straniero arrivato da regioni più calde.<br>
+        Si riproduce e adatta rapidamente, divora più di quanto lo stagno possa sopportare, lasciando agli abitanti locali meno cibo e spazio.</p>
+
+        <p>Misho non ha trovato un amico qui, ma una minaccia per l'equilibrio naturale.</p>  
+
+        <p>Ecco perché deve continuare la sua ricerca: gli amici veri aiutano, non prendono.</p>`,
        
       infoTitle: "Per chi vuole saperne di più",
       infoText: `L'area di Ribnjak (baia di Turanj, Val Torre) è una delle aree più rigorosamente protette delle Brioni Maggiori; in quest'area si trovano resti di mura di strutture romane, notate e documentate per la prima volta da Anton Gnirs. Questo sito non è ancora stato esplorato, tuttavia si presume che si tratti di una villa rustica collegata allo stagno. In epoca romana, la baia di Turanj era meno profonda di circa un metro, aveva uno stagno naturale facilmente chiudibile e con un afflusso controllato di acqua dolce marina. Oggi è un habitat importante per i pesci e le alghe, ma anche un'area importante per gli uccelli, come ad esempio per il martin pescatore che lì si nutre. Ci sono ancora molti giovani in quest'area che si nutrono e crescono lì per poi nuotare verso le profondità marine. Per proteggere la storia e non disturbare i pesci in quest'area, la balneazione è severamente vietata.`,
        
       riddleTitle: "🔍 Indovinello",
       riddleText: `
-        Inventa un indovinello.
+        <p>Non sono un cavallo,<br>
+        anche se potrei sembrarlo.<br>
+        Dicono che sono testardo,<br> 
+        ma io resto semplicemente fedele alle mie convinzioni.</p>
+
+        <p>Questi campi sono la mia casa;<br>
+        ho sopportato il peso della terra e delle persone.<p>
+
+        <p>Qui si incontrano mondi diversi:<br> 
+        quelli che sono arrivati<br> 
+        e quelli che sono sempre appartenuti.</p>
+
         <p><strong>Dove troverà amici Misho?</strong></p>
       `,
       hintBtn: "Ho bisogno di un aiuto",
-      hint: "Inventa un suggerimento...",
+      hint: "Anche il più grande abitante dell'isola vive qui 🐘",
       mapBtn: "Non so davvero dove andare, ho bisogno di una mappa con la posizione",
       mapLoading: "⏳ Caricamento mappa...",
       mapOpened: "Mappa aperta ✓",
-      mapLocation: "Sconosciuto",
+      mapLocation: "Parco safari",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2615.2983214472365!2d13.741531!3d44.924076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI2LjciTiAxM8KwNDQnMjkuNSJF!5e1!3m2!1shr!2shr!4v1770211146667!5m2!1shr!2shr"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -270,24 +327,45 @@ const LOCATIONS = {
             <img src="images/Plavi_rak.png" alt="Bild der blauen Krabbe" class="hero-image">`,
       story: `
         <p>Misho kam am Fischteich an.</p>
+        <p>Seit jeher wachsen in diesem geschützten Gebiet Fische heran, Vögel kommen hierher, um sich zu ernähren, und wir haben es geschützt.<br>
+        Aber unter den Fischen befindet sich eine Blaue Krabbe, ein Fremder, der aus wärmeren Regionen hierher gekommen ist.<br>
+        Sie vermehrt sich schnell, passt sich rasch an und frisst mehr, als der Teich verkraften kann, sodass den einheimischen Bewohnern weniger Nahrung und Platz zur Verfügung steht.</p>
+  
+        <p>Mišo hat hier keinen Freund gefunden, sondern eine Bedrohung für das natürliche Gleichgewicht.</p>
+
+        <p>Deshalb muss er seine Suche fortsetzen – wahre Freunde helfen, sie nehmen nicht.</p>
       `,
       
        infoTitle: "Für alle, die mehr wissen möchten",
        infoText: `Das Gebiet um Ribnjak (Bucht Turanj, Val Torre) zählt zu den am strengsten geschützten Gebieten von Veliki Brijuni. Hier befinden sich Überreste römischer Mauern, die erstmals von Anton Gnirs entdeckt und dokumentiert wurden. Die Stätte ist noch nicht erforscht, man vermutet jedoch, dass es sich um eine rustikale Villa handelt, die mit dem Teich verbunden war. Die Bucht Turanj war in römischer Zeit etwa einen Meter flacher, besaß einen natürlichen Teich, der sich leicht abdichten ließ und durch den kontrolliert frisches Meerwasser zugeführt wurde. Heute ist sie ein wichtiger Lebensraum für Fische, ein geschützter Lebensraum für Algen und ein bedeutendes Jagdgebiet für Vögel, beispielsweise Eisvögel. Zahlreiche Jungfische halten sich hier auf, fressen und wachsen heran, bevor sie ins offene Meer abwandern. Um die Geschichte zu bewahren und die Fische nicht zu stören, ist das Baden in diesem Gebiet strengstens verboten.`,
       
       riddleTitle: "🔍 Rätsel",
-      riddleText: `Erfinde ein Rätsel...`,
+      riddleText: `
+      <p>Ich bin kein Pferd,<br>
+      auch wenn ich vielleicht so aussehe.<br>
+      Die Leute sagen, ich sei stur,<br>
+      aber ich bleibe einfach standhaft.</p>
+
+      <p>Diese Felder sind mein Zuhause;<br>
+      ich habe die Last des Landes und der Menschen getragen.<br>
+
+      <p>Hier treffen Welten aufeinander –<br>
+      diejenigen, die gekommen sind,<br>
+      und diejenigen, die schon immer hierher gehörten.</p>
+
+Wo kann Mišo einen Freund finden?
+`,
       hintBtn: "Ich brauche einen Hinweis",
-      hint: "Erfinde einen Hinweis...",
+      hint: "Der größte Bewohner der Insel lebt auch hier 🐘",
       mapBtn: "Ich weiß wirklich nicht, wohin ich gehen soll, ich brauche eine Karte mit dem Standort.",
       mapLoading: "⏳ Karte wird geladen...",
       mapOpened: "Karte geöffnet ✓",
-      mapLocation: "Unbekannt",
+      mapLocation: "Safari-Park",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4721.586348162404!2d13.759664249657359!3d44.92232712443851!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1770045670226!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2615.2983214472365!2d13.741531!3d44.924076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI2LjciTiAxM8KwNDQnMjkuNSJF!5e1!3m2!1shr!2shr!4v1770211146667!5m2!1shr!2shr"
           width="600"
-          height="650"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -297,6 +375,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
