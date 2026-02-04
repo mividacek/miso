@@ -207,7 +207,7 @@ const LOCATIONS = {
       `,
 
       infoTitle: "For those who want to know more",
-      infoText: ``,
+      infoText: `The Fishpond area (Turanj Bay, Val Torre) is one of the most strictly protected areas on Veliki Brijuni, in this area there are remains of walls of Roman structures that were first noticed and recorded by Anton Gnirs. This site has not yet been explored, however, the assumption is that it is a rustic villa connected to the pond. Turanj Bay was shallower by about one meter in Roman times, had a natural pond that could be easily closed and which had a controlled inflow of fresh sea water. Today it is an important habitat for fish, a sheltered habitat for seaweed, but also an important area for birds, e.g. kingfishers feeding. There are still many young in this area that feed and grow there and then swim into the deeper sea. In order to protect history and not disturb the fish within this area, swimming is strictly prohibited.`,
       
       riddleTitle: "🔍 Riddle",
       riddleText: `Make up a riddle...`,
@@ -239,7 +239,7 @@ const LOCATIONS = {
       `,
        
       infoTitle: "Per chi vuole saperne di più",
-      infoText: ``,
+      infoText: `L'area di Ribnjak (baia di Turanj, Val Torre) è una delle aree più rigorosamente protette delle Brioni Maggiori; in quest'area si trovano resti di mura di strutture romane, notate e documentate per la prima volta da Anton Gnirs. Questo sito non è ancora stato esplorato, tuttavia si presume che si tratti di una villa rustica collegata allo stagno. In epoca romana, la baia di Turanj era meno profonda di circa un metro, aveva uno stagno naturale facilmente chiudibile e con un afflusso controllato di acqua dolce marina. Oggi è un habitat importante per i pesci e le alghe, ma anche un'area importante per gli uccelli, come ad esempio per il martin pescatore che lì si nutre. Ci sono ancora molti giovani in quest'area che si nutrono e crescono lì per poi nuotare verso le profondità marine. Per proteggere la storia e non disturbare i pesci in quest'area, la balneazione è severamente vietata.`,
        
       riddleTitle: "🔍 Indovinello",
       riddleText: `
@@ -273,7 +273,7 @@ const LOCATIONS = {
       `,
       
        infoTitle: "Für alle, die mehr wissen möchten",
-       infoText: ``,
+       infoText: `Das Gebiet um Ribnjak (Bucht Turanj, Val Torre) zählt zu den am strengsten geschützten Gebieten von Veliki Brijuni. Hier befinden sich Überreste römischer Mauern, die erstmals von Anton Gnirs entdeckt und dokumentiert wurden. Die Stätte ist noch nicht erforscht, man vermutet jedoch, dass es sich um eine rustikale Villa handelt, die mit dem Teich verbunden war. Die Bucht Turanj war in römischer Zeit etwa einen Meter flacher, besaß einen natürlichen Teich, der sich leicht abdichten ließ und durch den kontrolliert frisches Meerwasser zugeführt wurde. Heute ist sie ein wichtiger Lebensraum für Fische, ein geschützter Lebensraum für Algen und ein bedeutendes Jagdgebiet für Vögel, beispielsweise Eisvögel. Zahlreiche Jungfische halten sich hier auf, fressen und wachsen heran, bevor sie ins offene Meer abwandern. Um die Geschichte zu bewahren und die Fische nicht zu stören, ist das Baden in diesem Gebiet strengstens verboten.`,
       
       riddleTitle: "🔍 Rätsel",
       riddleText: `Erfinde ein Rätsel...`,
@@ -297,6 +297,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
