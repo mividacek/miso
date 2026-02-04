@@ -175,9 +175,8 @@ const LOCATIONS = {
       story: `<p>Mišo je stigao do Ribnjaka.</p>
         `,
       infoTitle: "Za one koji žele znati više",
-      infoText: `Brijunska je bara prirodna depresija ispunjena oborinskom vodom koja dotječe s okolnih terena. Njezina prosječna površina iznosi oko 1800 m<sup>2</sup>, a najveća dubina oko 2,5 m.
-                 Ovakve su bare područja iznimne biološke i krajobrazne raznolikosti, a posebnu važnost imaju kao utočišta migratornim vrstama ptica.<br>`,
-      //https://https://web.facebook.com/npbrijuni/photos/brijunska-je-bara-prirodna-depresija-ispunjena-oborinskom-vodom-koja-dotje%C4%8De-s-o/1322275081261781/?locale=da_DK&_rdc=1&_rdr
+      infoText: ``,
+      //linkaj izvor teksta ovdje
       
       riddleTitle: "🔍 Zagonetka",
       riddleText: `Smisli tekst...`,
@@ -208,8 +207,7 @@ const LOCATIONS = {
       `,
 
       infoTitle: "For those who want to know more",
-      infoText: `The Brijuni Fishpond is a natural depression filled with rainwater flowing from the surrounding terrain. Its average surface area is about 1800 m<sup>2</sup>, and its greatest depth is about 2.5 m.
-                Such ponds are areas of exceptional biological and landscape diversity, and they are of particular importance as refuges for migratory bird species.<br>`,
+      infoText: ``,
       
       riddleTitle: "🔍 Riddle",
       riddleText: `Make up a riddle...`,
@@ -241,8 +239,7 @@ const LOCATIONS = {
       `,
        
       infoTitle: "Per chi vuole saperne di più",
-      infoText: `La Peschiera di Brioni è una depressione naturale riempita dall'acqua piovana che scorre dal terreno circostante. La sua superficie media è di circa 1800 m<sup>2</sup> e la sua profondità massima è di circa 2,5 m.
-Questi stagni sono aree di eccezionale diversità biologica e paesaggistica e rivestono particolare importanza come rifugi per le specie di uccelli migratori.`,
+      infoText: ``,
        
       riddleTitle: "🔍 Indovinello",
       riddleText: `
@@ -276,8 +273,7 @@ Questi stagni sono aree di eccezionale diversità biologica e paesaggistica e ri
       `,
       
        infoTitle: "Für alle, die mehr wissen möchten",
-       infoText: `Das Brijuni-Fischteich ist eine natürliche Senke, die sich mit Regenwasser aus dem umliegenden Gelände füllt. Seine durchschnittliche Oberfläche beträgt etwa 1800 m<sup>2</sup>, seine größte Tiefe etwa 2,5 m.
-        Solche Teiche sind Gebiete von außergewöhnlicher biologischer und landschaftlicher Vielfalt und spielen eine besonders wichtige Rolle als Rückzugsgebiete für Zugvogelarten.`,
+       infoText: ``,
       
       riddleTitle: "🔍 Rätsel",
       riddleText: `Erfinde ein Rätsel...`,
@@ -301,6 +297,7 @@ Questi stagni sono aree di eccezionale diversità biologica e paesaggistica e ri
     }
   }
 };
+
 
 
 
