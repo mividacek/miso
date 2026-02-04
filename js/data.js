@@ -136,7 +136,7 @@ const LOCATIONS = {
         Hilfst du mir herauszufinden, wer sonst noch zu Brijuni gehört?</p>`,
 
        infoTitle: "Für alle, die mehr wissen möchten",
-       infoText: "Seit 2010 werden Fledermäuse auf Brijuni erforscht und beobachtet. Die Isolation dieses Archipels und die im Nationalpark geltenden Verhaltensregeln machen Brijuni zu einem äußerst geeigneten Lebensraum für verschiedene Fledermausarten. Ruhe und ungestörte Natur, ein ausreichendes Nahrungsangebot (nachtaktive Insekten) und eine große Vielfalt an Lebensräumen für die Tagesruhe sind die Gründe, warum auf diesem relativ kleinen Gebiet bis zu 18 verschiedene Arten dieser nützlichen und bedrohten Tiere vorkommen. Alle Fledermausarten Europas sind durch internationale Übereinkommen geschützt. Viele der auf Brijuni lebenden Arten stehen auf der Liste der gefährdeten Arten. Untersuchungen im Jahr 2014 ergaben, dass Brijuni ein wichtiger Brutplatz für die Große Nachtfledermaus (Nyctalus lasiopterus) ist, die in Kroatien zuvor als fast ausgestorben galt.",
+       infoText: "Seit 2010 werden Fledermäuse auf Brijuni erforscht und beobachtet. Die Isolation dieses Archipels und die im Nationalpark geltenden Verhaltensregeln machen Brijuni zu einem äußerst geeigneten Lebensraum für verschiedene Fledermausarten. Ruhe und ungestörte Natur, ein ausreichendes Nahrungsangebot (nachtaktive Insekten) und eine große Vielfalt an Lebensräumen für die Tagesruhe sind die Gründe, warum auf diesem relativ kleinen Gebiet bis zu 18 verschiedene Arten dieser nützlichen und bedrohten Tiere vorkommen. Alle Fledermausarten Europas sind durch internationale Übereinkommen geschützt. Viele der auf Brijuni lebenden Arten stehen auf der Liste der gefährdeten Arten. Untersuchungen im Jahr 2014 ergaben, dass Brijuni ein wichtiger Brutplatz für die Große Nachtfledermaus (<i>Nyctalus lasiopterus</i>) ist, die in Kroatien zuvor als fast ausgestorben galt.",
   
       riddleTitle: "🔍 Rätsel",
       riddleText: `
@@ -173,12 +173,11 @@ const LOCATIONS = {
       location: `<p>📍 Ribnjak</p>
             <img src="images/Plavi_rak.png" alt="Slika plavog raka" class="hero-image">`,
       story: `<p>Mišo je stigao do Ribnjaka.</p>
-              <p><strong>Za one koji žele znati više</strong></p>
-              Nitko još ništa ne zna ...
         `,
       infoTitle: "Za one koji žele znati više",
-      infoText: "Budite strpljivi",
-      //https://linkaj izvor ovdje
+      infoText: `Brijunska je bara prirodna depresija ispunjena oborinskom vodom koja dotječe s okolnih terena. Njezina prosječna površina iznosi oko 1800 m<sup>2</sup>, a najveća dubina oko 2,5 m.
+                 Ovakve su bare područja iznimne biološke i krajobrazne raznolikosti, a posebnu važnost imaju kao utočišta migratornim vrstama ptica.<br>`,
+      //https://https://web.facebook.com/npbrijuni/photos/brijunska-je-bara-prirodna-depresija-ispunjena-oborinskom-vodom-koja-dotje%C4%8De-s-o/1322275081261781/?locale=da_DK&_rdc=1&_rdr
       
       riddleTitle: "🔍 Zagonetka",
       riddleText: `Smisli tekst...`,
@@ -206,12 +205,11 @@ const LOCATIONS = {
       location: `<p>📍 Fishpond</p>
             <img src="images/Plavi_rak.png" alt="Picture of the blue crab" class="hero-image">`,
       story: `<p>Misho arrived at the Fishpond.</p>
-              <p><strong>For those who want to know more</strong></p>
-              <p>Nobody knows...</p>
       `,
 
       infoTitle: "For those who want to know more",
-      infoText: "Be patient...",
+      infoText: `The Brijuni Fishpond is a natural depression filled with rainwater flowing from the surrounding terrain. Its average surface area is about 1800 m<sup>2</sup>, and its greatest depth is about 2.5 m.
+                Such ponds are areas of exceptional biological and landscape diversity, and they are of particular importance as refuges for migratory bird species.<br>`,
       
       riddleTitle: "🔍 Riddle",
       riddleText: `Make up a riddle...`,
@@ -240,13 +238,11 @@ const LOCATIONS = {
             <img src="images/Plavi_rak.png" alt="Immagine del granchio blu" class="hero-image">`,
       story: `
         <p>Misho arrivò alla Peschiera.</p>
-
-        <p><strong>Per chi vuole saperne di più</strong></p>
-        <p>Non si sà</p>
       `,
        
       infoTitle: "Per chi vuole saperne di più",
-      infoText: "Abbiate pazienza ...",
+      infoText: `La Peschiera di Brioni è una depressione naturale riempita dall'acqua piovana che scorre dal terreno circostante. La sua superficie media è di circa 1800 m<sup>2</sup> e la sua profondità massima è di circa 2,5 m.
+Questi stagni sono aree di eccezionale diversità biologica e paesaggistica e rivestono particolare importanza come rifugi per le specie di uccelli migratori.`,
        
       riddleTitle: "🔍 Indovinello",
       riddleText: `
@@ -277,13 +273,11 @@ const LOCATIONS = {
             <img src="images/Plavi_rak.png" alt="Bild der blauen Krabbe" class="hero-image">`,
       story: `
         <p>Misho kam am Fischteich an.</p>
-
-        <p><strong>Für alle, die mehr wissen möchten</strong></p>
-        <p>Niemand weiß es …</p>
       `,
       
        infoTitle: "Für alle, die mehr wissen möchten",
-       infoText: "Sei geduldig ...",
+       infoText: `Das Brijuni-Fischteich ist eine natürliche Senke, die sich mit Regenwasser aus dem umliegenden Gelände füllt. Seine durchschnittliche Oberfläche beträgt etwa 1800 m<sup>2</sup>, seine größte Tiefe etwa 2,5 m.
+        Solche Teiche sind Gebiete von außergewöhnlicher biologischer und landschaftlicher Vielfalt und spielen eine besonders wichtige Rolle als Rückzugsgebiete für Zugvogelarten.`,
       
       riddleTitle: "🔍 Rätsel",
       riddleText: `Erfinde ein Rätsel...`,
@@ -307,6 +301,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
