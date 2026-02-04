@@ -91,11 +91,11 @@ const LOCATIONS = {
         Vivo qui da anni, insieme a molte altre creature interessanti.<br>
         Ma stasera i miei amici non si trovano...<br>
         Sono partito alla loro ricerca, ma sull'isola incontro anche strane creature sconosciute.<br>
-        Mi aiuteresti a scoprire chi altro appartiene a Brioni?</p>
+        Mi aiuteresti a scoprire chi altro appartiene a Brioni?</p>`,
 
-        <p><strong>Per chi vuole saperne di più</strong></p>
-        <p>I pipistrelli sono oggetto di studio e monitoraggio a Brioni dal 2010. L'isolamento di questo arcipelago e le restrizioni imposte dalle regole di comportamento del Parco Nazionale hanno reso Brioni un luogo estremamente adatto alla vita o alla residenza occasionale di diverse specie di pipistrelli. La pace e la libertà dall'interferenza umana, una quantità sufficiente di cibo (insetti notturni) e un'ampia varietà di habitat per il riposo diurno sono le ragioni per cui in quest'area relativamente piccola si possono trovare ben 18 specie diverse di questi animali utili e in via di estinzione. Tutte le specie di pipistrelli in Europa sono protette da convenzioni internazionali. Molte specie che vivono a Brioni sono nell'elenco delle specie in via di estinzione. Durante le ricerche del 2014, è stato stabilito che Brioni è un sito importante per la riproduzione del grande pipistrello notturno (<i>Nyctalus lasiopterus</i>), che in precedenza era considerato quasi estinto nella Repubblica di Croazia. </p>
-      `,
+      infoTitle: "Per chi vuole saperne di più",
+      infoText: "I pipistrelli sono oggetto di studio e monitoraggio a Brioni dal 2010. L'isolamento di questo arcipelago e le restrizioni imposte dalle regole di comportamento del Parco Nazionale hanno reso Brioni un luogo estremamente adatto alla vita o alla residenza occasionale di diverse specie di pipistrelli. La pace e la libertà dall'interferenza umana, una quantità sufficiente di cibo (insetti notturni) e un'ampia varietà di habitat per il riposo diurno sono le ragioni per cui in quest'area relativamente piccola si possono trovare ben 18 specie diverse di questi animali utili e in via di estinzione. Tutte le specie di pipistrelli in Europa sono protette da convenzioni internazionali. Molte specie che vivono a Brioni sono nell'elenco delle specie in via di estinzione. Durante le ricerche del 2014, è stato stabilito che Brioni è un sito importante per la riproduzione del grande pipistrello notturno (<i>Nyctalus lasiopterus</i>), che in precedenza era considerato quasi estinto nella Repubblica di Croazia.",
+  
       riddleTitle: "🔍 Indovinello",
       riddleText: `
         Volo di notte sopra l'acqua, alla ricerca dei miei amici.<br>
@@ -133,11 +133,11 @@ const LOCATIONS = {
         Ich lebe schon seit Jahren hier, zusammen mit vielen anderen interessanten Geschöpfen.<br>
         Aber heute Abend kommen meine Freunde nicht...<br>
         Ich mache mich auf die Suche nach ihnen, doch auf der Insel begegne ich auch seltsamen, unbekannten Kreaturen.<br>
-        Hilfst du mir herauszufinden, wer sonst noch zu Brijuni gehört?</p>
+        Hilfst du mir herauszufinden, wer sonst noch zu Brijuni gehört?</p>`,
 
-        <p><strong>Für alle, die mehr wissen möchten</strong></p>
-        <p>Seit 2010 werden Fledermäuse auf Brijuni erforscht und beobachtet. Die Isolation dieses Archipels und die im Nationalpark geltenden Verhaltensregeln machen Brijuni zu einem äußerst geeigneten Lebensraum für verschiedene Fledermausarten. Ruhe und ungestörte Natur, ein ausreichendes Nahrungsangebot (nachtaktive Insekten) und eine große Vielfalt an Lebensräumen für die Tagesruhe sind die Gründe, warum auf diesem relativ kleinen Gebiet bis zu 18 verschiedene Arten dieser nützlichen und bedrohten Tiere vorkommen. Alle Fledermausarten Europas sind durch internationale Übereinkommen geschützt. Viele der auf Brijuni lebenden Arten stehen auf der Liste der gefährdeten Arten. Untersuchungen im Jahr 2014 ergaben, dass Brijuni ein wichtiger Brutplatz für die Große Nachtfledermaus (Nyctalus lasiopterus) ist, die in Kroatien zuvor als fast ausgestorben galt.</p>
-      `,
+       infoTitle: "Für alle, die mehr wissen möchten",
+       infoText: "Seit 2010 werden Fledermäuse auf Brijuni erforscht und beobachtet. Die Isolation dieses Archipels und die im Nationalpark geltenden Verhaltensregeln machen Brijuni zu einem äußerst geeigneten Lebensraum für verschiedene Fledermausarten. Ruhe und ungestörte Natur, ein ausreichendes Nahrungsangebot (nachtaktive Insekten) und eine große Vielfalt an Lebensräumen für die Tagesruhe sind die Gründe, warum auf diesem relativ kleinen Gebiet bis zu 18 verschiedene Arten dieser nützlichen und bedrohten Tiere vorkommen. Alle Fledermausarten Europas sind durch internationale Übereinkommen geschützt. Viele der auf Brijuni lebenden Arten stehen auf der Liste der gefährdeten Arten. Untersuchungen im Jahr 2014 ergaben, dass Brijuni ein wichtiger Brutplatz für die Große Nachtfledermaus (Nyctalus lasiopterus) ist, die in Kroatien zuvor als fast ausgestorben galt.",
+  
       riddleTitle: "🔍 Rätsel",
       riddleText: `
         Nachts fliege ich übers Wasser und suche meine Freunde.<br>
@@ -176,6 +176,10 @@ const LOCATIONS = {
               <p><strong>Za one koji žele znati više</strong></p>
               Nitko još ništa ne zna ...
         `,
+      infoTitle: "Za one koji žele znati više",
+      infoText: "Budite strpljivi",
+      //https://linkaj izvor ovdje
+      
       riddleTitle: "🔍 Zagonetka",
       riddleText: `Smisli tekst...`,
       hintBtn: "Trebam pomoć",
@@ -205,6 +209,10 @@ const LOCATIONS = {
               <p><strong>For those who want to know more</strong></p>
               <p>Nobody knows...</p>
       `,
+
+      infoTitle: "For those who want to know more",
+      infoText: "Be patient...",
+      
       riddleTitle: "🔍 Riddle",
       riddleText: `Make up a riddle...`,
       hintBtn: "I need a hint",
@@ -236,6 +244,10 @@ const LOCATIONS = {
         <p><strong>Per chi vuole saperne di più</strong></p>
         <p>Non si sà</p>
       `,
+       
+      infoTitle: "Per chi vuole saperne di più",
+      infoText: "Abbiate pazienza ...",
+       
       riddleTitle: "🔍 Indovinello",
       riddleText: `
         Inventa un indovinello.
@@ -269,6 +281,10 @@ const LOCATIONS = {
         <p><strong>Für alle, die mehr wissen möchten</strong></p>
         <p>Niemand weiß es …</p>
       `,
+      
+       infoTitle: "Für alle, die mehr wissen möchten",
+       infoText: "Sei geduldig ...",
+      
       riddleTitle: "🔍 Rätsel",
       riddleText: `Erfinde ein Rätsel...`,
       hintBtn: "Ich brauche einen Hinweis",
@@ -291,6 +307,7 @@ const LOCATIONS = {
     }
   }
 };
+
 
 
 
