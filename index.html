@@ -10,7 +10,6 @@
 </head>
 <body>
 
-  <!-- LANGUAGE SELECT -->
   <div class="language-bar">
     <span onclick="setLang('hr')">HR</span>
     <span onclick="setLang('en')">EN</span>
@@ -25,14 +24,18 @@
     
     <div class="story" id="story"></div>
     
-    <div class="info" id="infoBlock">
-      <h3 id="infoTitle"></h3>
-      <div id="infoText"></div>
-    </div>
+    <details class="info" id="infoBlock" open>
+      <summary id="infoTitle"></summary>
+      <div id="infoText" class="info-body"></div>
+    </details>
 
 
+  <div class="end-card" id="endCard">
+     <h3 id="endTitle"></h3>
+     <div id="endText"></div>
+  </div>
 
-    <!-- RIDDLE -->
+
     <div class="riddle">
       <h3 id="riddleTitle"></h3>
       <p id="riddleText"></p>
