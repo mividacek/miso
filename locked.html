@@ -1,0 +1,236 @@
+<!-- locked.html -->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igra: skenirani QR kod</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .locked-card{
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 22px;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .locked-card h1{
+      font-family: 'Amatic SC', cursive;
+      font-size: 3rem;
+      margin: 0 0 10px;
+      color: #2f6b4f;
+    }
+    .locked-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:16px;
+    }
+    .btn-like{
+      border: 2px dashed #2f6b4f;
+      background: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: #2f6b4f;
+      transition: all 0.3s ease;
+      text-decoration:none;
+    }
+    .btn-like:hover{
+      background:#2f6b4f;
+      color:#fff;
+    }
+    .small{
+      font-size: 1rem;
+      color:#444;
+      line-height:1.6;
+      text-align:left;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .map-frame{
+      width: 100%;
+      height: 360px;
+      border: 0;
+      border-radius: 16px;
+    }
+    .start-actions{
+      display:flex;
+      justify-content:center;
+      margin-top:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="language-bar">
+    <span onclick="setLangUI('hr')">HR</span>
+    <span onclick="setLangUI('en')">EN</span>
+    <span onclick="setLangUI('it')">IT</span>
+    <span onclick="setLangUI('de')">DE</span>
+  </div>
+
+  <div class="locked-card">
+    <h1 id="lockedTitle"></h1>
+    <p class="small" id="lockedText"></p>
+
+    <div class="locked-actions" id="lockedActions">
+      <button id="goStartBtn" class="btn-like" type="button"></button>
+      <button id="continueBtn" class="btn-like" type="button"></button>
+    </div>
+
+    <!-- START INFO (hidden until "Kreni od početka") -->
+    <div id="startInfo" style="display:none; margin-top:20px;">
+      <p class="small" id="startInfoText"></p>
+
+      <div style="margin-top:16px;">
+        <iframe
+          class="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.648084203869!2d13.765813175810603!3d44.91639256982298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477cd17291638689%3A0x47918aa2bfe5c853!2sInfo%20punkt%2C%20NP%20Brijuni!5e1!3m2!1shr!2shr!4v1770552650950!5m2!1shr!2shr"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Button under the map -->
+      <div class="start-actions">
+        <button id="openStartBtn" class="btn-like" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script>
+    const PROGRESS_KEY = "miso_progress_v1";
+    const ROUTE_SAFE = (typeof ROUTE !== "undefined") ? ROUTE : ["start"];
+
+    function loadProgress(){
+      try{
+        const raw = localStorage.getItem(PROGRESS_KEY);
+        if(!raw) return { maxStep: 0, visited: { start:true } };
+        const p = JSON.parse(raw);
+        if(typeof p.maxStep !== "number") p.maxStep = 0;
+        if(!p.visited || typeof p.visited !== "object") p.visited = {};
+        if(!p.visited.start) p.visited.start = true;
+        return p;
+      }catch{
+        return { maxStep: 0, visited: { start:true } };
+      }
+    }
+    function saveProgress(p){ localStorage.setItem(PROGRESS_KEY, JSON.stringify(p)); }
+
+    const params = new URLSearchParams(location.search);
+    const loc = params.get("loc") || "start";
+    let lang = (params.get("lang") || "en").toLowerCase();
+
+    const COPY = {
+      hr: {
+        title: "Skenirao/la si QR kod iz igre",
+        text: `Ovaj QR kod je dio potrage “Šišmiš Mišo i izgubljeni”. Da bi igra imala smisla, lokacije se otključavaju redom. Možeš krenuti od početka ili (ako si promijenio/la mobitel) nastaviti od ove lokacije.`,
+        startInfo: "Za početak igre, skeniraj početni QR kod na info punktu Nacionalnog parka Brijuni.",
+        btnStart: "Kreni od početka",
+        btnContinue: "Nastavi odavde",
+        btnAlreadyThere: "Već sam tamo – otvori start"
+      },
+      en: {
+        title: "You scanned a QR code from the game",
+        text: "This QR code is part of the quest “Misho the Bat and the Lost Ones”. To keep the story consistent, locations unlock in order. You can start from the beginning or continue from this location (useful if you switched phones).",
+        startInfo: "To start the game, scan the starting QR code at the Brijuni National Park info point.",
+        btnStart: "Start from the beginning",
+        btnContinue: "Continue from here",
+        btnAlreadyThere: "I’m already there – open start"
+      },
+      it: {
+        title: "Hai scansionato un QR code del gioco",
+        text: "Questo QR code fa parte della caccia “Il pipistrello Misho e gli scomparsi”. Le tappe si sbloccano in ordine. Puoi iniziare dall’inizio oppure continuare da qui (se hai cambiato telefono).",
+        startInfo: "Per iniziare il gioco, scansiona il QR code iniziale presso il punto informazioni del Parco Nazionale di Brioni.",
+        btnStart: "Inizia dall’inizio",
+        btnContinue: "Continua da qui",
+        btnAlreadyThere: "Sono già lì – apri start"
+      },
+      de: {
+        title: "Du hast einen QR-Code aus dem Spiel gescannt",
+        text: "Dieser QR-Code gehört zur Suche “Die Fledermaus Misho und die Vermissten”. Damit die Geschichte Sinn ergibt, werden Orte der Reihe nach freigeschaltet. Du kannst von vorne starten oder ab hier fortfahren (z.B. wenn du das Handy gewechselt hast).",
+        startInfo: "Um das Spiel zu starten, scanne den Start-QR-Code am Informationspunkt des Nationalparks Brijuni.",
+        btnStart: "Von vorne starten",
+        btnContinue: "Ab hier fortfahren",
+        btnAlreadyThere: "Ich bin schon dort – Start öffnen"
+      }
+    };
+
+    function getCopy(l){ return COPY[l] || COPY.en; }
+
+    function setLangUI(l){
+      lang = l;
+      const c = getCopy(l);
+      document.documentElement.lang = l;
+
+      document.getElementById("lockedTitle").textContent = c.title;
+      document.getElementById("lockedText").textContent  = c.text;
+
+      // main buttons
+      document.getElementById("goStartBtn").textContent   = c.btnStart;
+      document.getElementById("continueBtn").textContent  = c.btnContinue;
+
+      // map button
+      document.getElementById("openStartBtn").textContent = c.btnAlreadyThere;
+
+      // if startInfo already visible -> update its text
+      const startInfoBox = document.getElementById("startInfo");
+      if (startInfoBox && startInfoBox.style.display !== "none") {
+        document.getElementById("startInfoText").textContent = c.startInfo;
+      }
+    }
+
+    // Continue from here
+    document.getElementById("continueBtn").addEventListener("click", () => {
+      const idx = ROUTE_SAFE.indexOf(loc);
+      const p = loadProgress();
+
+      if (idx >= 0) {
+        p.maxStep = Math.max(p.maxStep, idx);
+        for (let i = 0; i <= idx; i++) p.visited[ROUTE_SAFE[i]] = true;
+      } else {
+        p.maxStep = Math.max(p.maxStep, 999);
+        p.visited[loc] = true;
+      }
+
+      saveProgress(p);
+
+      location.href =
+        `index.html?loc=${encodeURIComponent(loc)}&lang=${encodeURIComponent(lang)}`;
+    });
+    
+    document.getElementById("goStartBtn").addEventListener("click", () => {
+        localStorage.removeItem(PROGRESS_KEY);
+        
+        const c = getCopy(lang);
+        document.getElementById("startInfoText").textContent = c.startInfo;
+        document.getElementById("startInfo").style.display = "block";
+        
+        // sakrij samo gumb "Kreni od početka"
+        
+        document.getElementById("goStartBtn").style.display = "none";
+    });
+
+
+    // Under-map button: open start
+    document.getElementById("openStartBtn").addEventListener("click", () => {
+      localStorage.removeItem(PROGRESS_KEY);
+      location.href = `index.html?loc=start&lang=${encodeURIComponent(lang)}`;
+    });
+
+    // init
+    setLangUI(lang);
+  </script>
+</body>
+</html>
