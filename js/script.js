@@ -1,5 +1,3 @@
-//script.js
-
 let mapLoaded = false;
 
 /* -----------------------------
@@ -311,6 +309,7 @@ function toggleMap() {
    INIT
 ------------------------------*/
 setLang(detectLanguage());
+
 
 
 
