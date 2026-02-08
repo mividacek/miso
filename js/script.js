@@ -1,3 +1,5 @@
+//script.js
+
 let mapLoaded = false;
 
 /* -----------------------------
@@ -78,6 +80,88 @@ function closeHintUI() {
   if (hint) hint.classList.remove("show");
 }
 
+function isNonEmptyHtml(value) {
+  if (!value) return false;
+  // ukloni HTML i whitespace da ne prođe "<p><br></p>"
+  const tmp = document.createElement("div");
+  tmp.innerHTML = String(value);
+  const text = (tmp.textContent || "").replace(/\u00A0/g, " ").trim();
+  return text.length > 0;
+}
+
+
+function setVisible(el, shouldShow, displayType = "block") {
+  if (!el) return;
+  el.style.display = shouldShow ? displayType : "none";
+}
+
+/* -----------------------------
+   LOCATION PROGRESS
+------------------------------*/
+
+const PROGRESS_KEY = "miso_progress_v1";
+
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(PROGRESS_KEY);
+    if (!raw) return { maxStep: 0, visited: { start: true } };
+    const p = JSON.parse(raw);
+    if (typeof p.maxStep !== "number") p.maxStep = 0;
+    if (!p.visited || typeof p.visited !== "object") p.visited = {};
+    if (!p.visited.start) p.visited.start = true;
+    return p;
+  } catch {
+    return { maxStep: 0, visited: { start: true } };
+  }
+}
+
+function saveProgress(p) {
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(p));
+}
+
+function stepIndex(loc) {
+  return (typeof ROUTE !== "undefined") ? ROUTE.indexOf(loc) : -1;
+}
+
+function markVisited(loc) {
+  const p = loadProgress();
+  const idx = stepIndex(loc);
+  if (idx >= 0) p.maxStep = Math.max(p.maxStep, idx);
+  p.visited[loc] = true;
+  saveProgress(p);
+}
+
+
+
+function canOpenLocation(loc) {
+  if (loc === "start") return true;
+  const idx = stepIndex(loc);
+  if (idx === -1) return false;
+  const p = loadProgress();
+  return p.maxStep >= (idx - 1);
+}
+
+/* -----------------------------
+   GATE (lock screen)
+------------------------------*/
+
+
+if (CURRENT_LOCATION !== "start" && !canOpenLocation(CURRENT_LOCATION)) {
+  console.log("GATE BLOCKED", {
+    CURRENT_LOCATION,
+    idx: stepIndex(CURRENT_LOCATION),
+    progress: loadProgress(),
+  });
+
+  const lang = (getParams().get("lang") || "en").toLowerCase();
+  window.location.replace(
+  `locked.html?loc=${encodeURIComponent(CURRENT_LOCATION)}&lang=${encodeURIComponent(lang)}`
+);
+throw new Error("Redirecting to locked.html");
+
+}
+
+
 /* -----------------------------
    SET LANGUAGE (MAIN RENDER)
 ------------------------------*/
@@ -103,6 +187,10 @@ function setLang(lang) {
   const infoTitleEl = document.getElementById("infoTitle");
   const infoTextEl = document.getElementById("infoText");
 
+  const endCardEl = document.getElementById("endCard");
+  const endTitleEl = document.getElementById("endTitle");
+  const endTextEl  = document.getElementById("endText");
+
   if (titleEl) titleEl.innerHTML = t.title || "";
   if (locationEl) locationEl.innerHTML = t.location || "";
   if (storyEl) storyEl.innerHTML = t.story || "";
@@ -119,11 +207,50 @@ function setLang(lang) {
   if (infoTitleEl) infoTitleEl.innerHTML = t.infoTitle || "";
   if (infoTextEl) infoTextEl.innerHTML = t.infoText || "";
 
-  const hasInfo = (t.infoTitle || t.infoText);
-  if (infoBlockEl) infoBlockEl.style.display = hasInfo ? "block" : "none";
+  // INFO block (otvoren po defaultu)
+  const hasInfo = isNonEmptyHtml(t.infoTitle) || isNonEmptyHtml(t.infoText);
+  if (infoBlockEl) {
+    infoBlockEl.style.display = hasInfo ? "block" : "none";
+    infoBlockEl.open = true;
+  }
+
+  // END card (fallback na ENG)
+  const locationData = LOCATIONS[CURRENT_LOCATION] || {};
+  const enFallback = locationData.en || {};
+
+  const endTitle = t.endTitle || enFallback.endTitle || "";
+  const endText  = t.endText  || enFallback.endText  || "";
+
+  if (endTitleEl) endTitleEl.innerHTML = endTitle;
+  if (endTextEl)  endTextEl.innerHTML  = endText;
+
+  const hasEnd = isNonEmptyHtml(endTitle) || isNonEmptyHtml(endText);
+  setVisible(endCardEl, hasEnd, "block");
+
+
+
   // reset UI states on language change
   closeHintUI();
   closeMapUI();
+
+  // --- VISIBILITY RULES (hide empty sections) ---
+  const hintWrap = document.querySelector(".hint-container");
+  const mapWrap = document.querySelector(".map-container");
+  const riddleWrap = document.querySelector(".riddle");
+
+  const hasHint = isNonEmptyHtml(t.hintBtn) && isNonEmptyHtml(t.hint);
+  const hasMap  = isNonEmptyHtml(t.mapBtn) && isNonEmptyHtml(t.map);
+  const hasRiddle = isNonEmptyHtml(t.riddleTitle) || isNonEmptyHtml(t.riddleText);
+
+  setVisible(hintWrap, hasHint);
+  setVisible(mapWrap, hasMap);
+  setVisible(riddleWrap, hasRiddle);
+
+  if (!hasMap) closeMapUI();
+  if (!hasHint) closeHintUI();
+
+  markVisited(CURRENT_LOCATION);
+
 }
 
 /* -----------------------------
