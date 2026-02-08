@@ -1,3 +1,6 @@
+const ROUTE = ["start", "ribnjak", "safari", "kucazabrodice"];
+
+
 const LOCATIONS = {
   start: {
     hr: {
@@ -376,22 +379,78 @@ Wo kann Mišo einen Freund finden?
         </iframe>
       `
     }
+  },
+
+  kucazabrodice: {
+  hr: {
+    title: "Šišmiš Mišo i izgubljeni",
+    location: `<p>📍 Kuća za brodice</p>
+      <img src="Slika" alt="" class="hero-image">`,
+    story: `<p>Mišo je stigao u kući za brodice</p>
+      <p>U kućici za brodice se nalazi crvena moruzgva, ali je šišmiš Mišo ne može vidjeti od količine rebraša koji se nalaze u moru.</p>
+    `,
+    infoTitle: "Za one koji žele znati više",
+    infoText: `
+      <p>Na samome ulasku u luku Veliki Brijun jasno se ističe neobična građevina – <strong>Kuća za brodice</strong>...</p>
+      <p><strong>Rebraš</strong> Mnemiopsis ledyi je invazivna vrsta...</p>
+      <p><em>Dodati tekst o moruzgvi</em></p>
+    `,
+
+    endTitle: "Kraj potrage",
+    endText: `
+      <p><strong>Mišovoj potrazi je došao kraj.</strong></p>
+      <p>Nisu svi gosti loši – ali priroda pamti ravnotežu.<br>
+      Ti sada znaš razliku.<br>
+      Hvala što si pomogao Miši čuvati Brijune.</p>
+    `
+  },
+
+  en: {
+    title: "Misho the Bat and the Lost Ones",
+    location: `<p>📍 </p>
+      <img src="Slika" alt="" class="hero-image">`,
+    story: `<p>Misho arrived at the -.</p>`,
+    infoTitle: "For those who want to know more",
+    infoText: `<em>Write anything</em>`,
+    endTitle: "End of the quest",
+    endText: `
+      <p><strong>Misho’s quest has come to an end.</strong></p>
+      <p>Not every guest is bad — but nature remembers balance.<br>
+      Now you know the difference.<br>
+      Thank you for helping Misho protect Brijuni.</p>
+    `
+  },
+
+  it: {
+    title: "Il pipistrello Misho e gli scomparsi",
+    location: `<p>📍 </p>
+      <img src="Slika" alt="" class="hero-image">`,
+    story: `<p>Misho arrivò alla Peschiera.</p>`,
+    infoTitle: "Per chi vuole saperne di più",
+    infoText: ``,
+    endTitle: "Fine",
+    endText: `
+      <p><strong>La ricerca di Misho è finita.</strong></p>
+      <p>Non tutti gli ospiti sono cattivi — ma la natura ricorda l’equilibrio.<br>
+      Ora conosci la differenza.<br>
+      Grazie per aver aiutato Misho a proteggere Brioni.</p>
+    `
+  },
+
+  de: {
+    title: "Die Fledermaus Misho und die Vermissten",
+    location: `<p>📍 </p>
+      <img src="Slika" alt="" class="hero-image">`,
+    story: ``,
+    infoTitle: "Für alle, die mehr wissen möchten",
+    infoText: ``,
+    endTitle: "Ende der Suche",
+    endText: `
+      <p><strong>Mishos Suche ist zu Ende.</strong></p>
+      <p>Nicht jeder Gast ist schlecht — aber die Natur erinnert sich an das Gleichgewicht.<br>
+      Jetzt kennst du den Unterschied.<br>
+      Danke, dass du Misho geholfen hast, Brijuni zu schützen.</p>
+    `
   }
+},
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
