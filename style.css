@@ -58,16 +58,60 @@ h2 {
   font-size: 1rem;
 }
 
+
 .info {
+  margin: 26px auto 0;
   text-align: left;
-  line-height: 1.6;
-  font-size: 1rem;
+/*  line-height: 1.6;
+  font-size: 1rem;*/
+  padding: 18px 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
+
 
 .info h3 {
   font-weight: bold;
 }
 
+.info summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.9rem;
+  color: #2f6b4f;
+  outline: none;
+}
+
+.info summary::-webkit-details-marker { display: none; }
+
+.info[open] summary {
+  margin-bottom: 10px;
+}
+
+.info-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.end-card{
+  display:none;
+  margin: 28px auto 0;
+  padding: 22px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.end-card h3{
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.2rem;
+  margin: 0 0 10px;
+  color: #2f6b4f;
+}
 
 .riddle {
   margin-top: 40px;
