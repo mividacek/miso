@@ -237,7 +237,7 @@ function setLang(lang) {
   const riddleWrap = document.querySelector(".riddle");
 
   const hasHint = isNonEmptyHtml(t.hintBtn) && isNonEmptyHtml(t.hint);
-  const hasMap  = isNonEmptyHtml(t.mapBtn) && isNonEmptyHtml(t.map);
+  const hasMap = isNonEmptyHtml(t.mapBtn) && !!(t.map && String(t.map).trim().length > 0);
   const hasRiddle = isNonEmptyHtml(t.riddleTitle) || isNonEmptyHtml(t.riddleText);
 
   setVisible(hintWrap, hasHint);
@@ -309,6 +309,7 @@ function toggleMap() {
    INIT
 ------------------------------*/
 setLang(detectLanguage());
+
 
 
 
