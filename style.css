@@ -381,23 +381,6 @@ h2 {
   text-align: center;
 }
 
-.map-btn {
-  background: none;
-  border: 2px dashed #2f6b4f;
-  padding: 10px 18px;
-  border-radius: 20px;
-  font-family: 'Amatic SC', cursive;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: #2f6b4f;
-  transition: all 0.3s ease;
-}
-
-.map-btn:hover {
-  background-color: #2f6b4f;
-  color: white;
-}
-
 .map-container.show {
   opacity: 1;
   max-height: 650px;
@@ -485,20 +468,21 @@ h2 {
 }
 
 
-.map-btn {
+/* MAP BUTTON (caution / emergency look) */
+.map-btn{
+  /* caution tone */
   background: rgba(184, 134, 11, 0.08);
   border: 1.5px dashed rgba(184, 134, 11, 0.55);
+  color: rgba(140, 100, 8, 0.88);
 
   padding: 8px 14px;
   border-radius: 16px;
 
   font-family: 'Amatic SC', cursive;
   font-size: 1.45rem;
-  font-weight: 600;
+  font-weight: 650;
 
   cursor: pointer;
-  
-  color: rgba(140, 100, 8, 0.85);
 
   transition:
     background-color .2s ease,
@@ -507,27 +491,47 @@ h2 {
     transform .15s ease,
     opacity .2s ease;
 
-  opacity: 0.85;
+  opacity: .88;
+
+  /* avoid mobile "tap/hover" weirdness */
+  -webkit-tap-highlight-color: transparent;
 }
 
-
+/* hover only on real-hover devices (desktop) */
 @media (hover: hover) and (pointer: fine){
-  .map-btn:hover {
+  .map-btn:hover{
     background: rgba(184, 134, 11, 0.16);
-    border-color: rgba(184, 134, 11, 0.75);
+    border-color: rgba(184, 134, 11, 0.78);
     color: rgba(120, 85, 5, 1);
     transform: translateY(-1px);
   }
 }
 
-.map-btn:active {
-  transform: translateY(0);
+/* touch feedback (no green!) */
+@media (hover: none) and (pointer: coarse){
+  .map-btn:active{
+    transform: scale(0.99);
+  }
 }
 
-.map-btn.opened {
+/* OPENED state (still caution, not green) */
+.map-btn.opened{
   background: #b8860b;
   border-color: #b8860b;
-  color: white;
+  color: #fff;
+  border-style: solid;
+}
+
+/* LOADING state should NOT inherit green */
+.map-btn.loading{
+  /* keep caution palette while loading */
+  background: rgba(184, 134, 11, 0.12);
+  border-color: rgba(184, 134, 11, 0.7);
+  color: rgba(120, 85, 5, 1);
+
+  animation: pulse 1s infinite ease-in-out;
+  pointer-events: none;
+  opacity: 0.75;
 }
 
 @keyframes pulse{
@@ -620,5 +624,6 @@ h2 {
 
 #stepNav{ display:none; }
 #stepNav.show{ display:flex; }
+
 
 
