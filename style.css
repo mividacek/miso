@@ -485,46 +485,50 @@ h2 {
 }
 
 
-.map-btn.opened{
-  background:#2f6b4f;
-  color:#fff;
-  border-style:solid;
+.map-btn {
+  background: rgba(184, 134, 11, 0.08);
+  border: 1.5px dashed rgba(184, 134, 11, 0.55);
+
+  padding: 8px 14px;
+  border-radius: 16px;
+
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.45rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  
+  color: rgba(140, 100, 8, 0.85);
+
+  transition:
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease,
+    transform .15s ease,
+    opacity .2s ease;
+
+  opacity: 0.85;
 }
 
-.map-loader{
-  display:none;
-  height:220px;
-  margin-top:20px;
-  border-radius:18px;
-  background:linear-gradient(
-    110deg,
-    #f0f0f0 8%,
-    #ffffff 18%,
-    #f0f0f0 33%
-  );
-  background-size:200% 100%;
-  animation:shimmer 1.4s infinite linear;
-}
 
-.map-loader.show{
-  display:block;
-}
-
-@keyframes shimmer{
-  to{
-    background-position:-200% 0;
+@media (hover: hover) and (pointer: fine){
+  .map-btn:hover {
+    background: rgba(184, 134, 11, 0.16);
+    border-color: rgba(184, 134, 11, 0.75);
+    color: rgba(120, 85, 5, 1);
+    transform: translateY(-1px);
   }
 }
 
-.map-btn.loading{
-  animation:pulse 1s infinite ease-in-out;
+.map-btn:active {
+  transform: translateY(0);
 }
 
-.map-btn.loading{
-  pointer-events:none;
-  opacity:0.7;
+.map-btn.opened {
+  background: #b8860b;
+  border-color: #b8860b;
+  color: white;
 }
-
 
 @keyframes pulse{
   0%{ transform:scale(1); }
@@ -616,4 +620,5 @@ h2 {
 
 #stepNav{ display:none; }
 #stepNav.show{ display:flex; }
+
 
