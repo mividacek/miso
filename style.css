@@ -535,20 +535,29 @@ h2 {
 
 /* STEP NAV (← x/n →) */
 .progressline{
+  /* force real centering on all screens */
+  width: 100%;
+  max-width: 900px;          /* matches .content width */
   margin: 10px auto 6px;
+
   display:flex;
   align-items:center;
   justify-content:center;
   gap:16px;
 
   font-family:'Amatic SC', cursive;
-  font-size: 1.4rem;         
+  font-size: 1.4rem;
   font-weight: 700;
   color:#2f6b4f;
 
+  /* smooth reveal */
   opacity:0;
   transform: translateY(-4px);
   transition: opacity .45s ease, transform .45s ease;
+
+  /* avoid weird mobile “left cling” */
+  box-sizing: border-box;
+  padding: 0 12px;
 }
 
 .progressline.show{
@@ -564,30 +573,47 @@ h2 {
 
 .progressline__arrow{
   border:none;
-  background:none;
+  background:transparent;    /* IMPORTANT: no box background by default */
   font-family:'Amatic SC', cursive;
-  font-size:1.6rem;          /* bolder arrows */
+  font-size:1.6rem;
   font-weight:600;
   cursor:pointer;
   color:#2f6b4f;
+
   padding:2px 10px;
   border-radius:10px;
-  transition: all .2s ease;
-  opacity:.95;
-}
 
-.progressline__arrow:hover{
-  background:#2f6b4f;
-  color:white;
-  transform: scale(1.06);
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+  opacity:.95;
+
+  /* remove mobile tap highlight “box feel” */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .progressline__arrow:disabled{
   opacity:.25;
   cursor:default;
-  background:none;
+  background:transparent;
   color:#2f6b4f;
   transform:none;
 }
 
+/* Hover effects ONLY on devices that actually hover (desktop/laptop) */
+@media (hover: hover) and (pointer: fine){
+  .progressline__arrow:hover{
+    background:#2f6b4f;
+    color:white;
+    transform: scale(1.06);
+  }
+}
+
+/* Touch devices: keep it clean (no “sticky hover squares”) */
+@media (hover: none) and (pointer: coarse){
+  .progressline__arrow:active{
+    transform: scale(0.98);
+  }
+}
+
+#stepNav{ display:none; }
+#stepNav.show{ display:flex; }
 
