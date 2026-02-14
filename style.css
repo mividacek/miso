@@ -59,59 +59,264 @@ h2 {
 }
 
 
+/* INFO CARD */
+
 .info {
-  margin: 26px auto 0;
+  margin: 28px auto 0;
   text-align: left;
-/*  line-height: 1.6;
-  font-size: 1rem;*/
-  padding: 18px 18px;
-  border-radius: 18px;
-  background: #ffffff;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 22px 24px 22px 28px;
+
+  border-radius: 16px;
+
+  /* warm parchment background */
+  background: linear-gradient(
+    180deg,
+    #fdfbf4 0%,
+    #f6f1e2 100%
+  );
+
+  /* soft border */
+  border: 1px solid rgba(47,107,79,0.16);
+
+  /* layered shadow for depth */
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+
+  position: relative;
+
+  /* smooth interaction */
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease,
+    opacity .25s ease;
 }
 
 
-.info h3 {
-  font-weight: bold;
+/* vertical Mišo accent line */
+.info::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+
+  width: 4px;
+  border-radius: 4px;
+
+  background: linear-gradient(
+    180deg,
+    #2f6b4f 0%,
+    #5f9076 100%
+  );
+
+  opacity: 0.75;
 }
 
+
+/* subtle lift on hover */
+.info:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+}
+
+
+/* smooth open animation */
+.info[open] {
+  animation: misoInfoOpen .35s ease;
+}
+
+@keyframes misoInfoOpen {
+  from {
+    opacity: .7;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* title */
 .info summary {
   cursor: pointer;
+
   list-style: none;
+
   font-weight: 700;
   font-family: 'Amatic SC', cursive;
-  font-size: 1.9rem;
+  font-size: 2.1rem;
+
   color: #2f6b4f;
+
+  letter-spacing: 0.6px;
+
   outline: none;
+
+  transition: color .2s ease;
 }
 
-.info summary::-webkit-details-marker { display: none; }
 
+/* remove default arrow */
+.info summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* spacing when open */
 .info[open] summary {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
+
+/* body text */
 .info-body {
   font-size: 1rem;
-  line-height: 1.6;
+  text-align: justify;
+  line-height: 1.7;
+  color: #2a2a2a;
 }
 
-.end-card{
-  display:none;
-  margin: 28px auto 0;
-  padding: 22px;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  text-align: center;
-}
 
-.end-card h3{
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.2rem;
-  margin: 0 0 10px;
+/* optional emphasis styles inside info */
+.info-body strong {
   color: #2f6b4f;
+  font-weight: 600;
 }
+
+.info-body em {
+  color: #555;
+}
+
+
+/* mobile optimization */
+@media (max-width: 600px) {
+
+  .info {
+    padding: 18px 18px 18px 22px;
+    border-radius: 14px;
+  }
+
+  .info summary {
+    font-size: 1.9rem;
+  }
+
+}
+
+/* END CARD */
+
+.end-card {
+  display: none;
+
+  margin: 44px auto 12px;
+  padding: 34px 28px;
+
+  border-radius: 20px;
+
+  /* lagoon / sea glass background */
+  background: linear-gradient(
+    180deg,
+    #f2fbf9 0%,
+    #dff3ee 100%
+  );
+
+  border: 2px solid rgba(17, 50, 49, 0.45);
+
+  box-shadow:
+    0 16px 42px rgba(0,0,0,0.14),
+    0 0 0 5px rgba(255,255,255,0.65);
+
+  text-align: center;
+
+  position: relative;
+
+  animation: misoEndReveal .7s ease;
+}
+
+
+/* decorative icon */
+.end-card::before {
+  content: "✦";
+
+  display: block;
+
+  font-size: 2.2rem;
+
+  margin-bottom: 10px;
+
+  color: #1f7a74;
+
+  opacity: 0.85;
+}
+
+
+/* title */
+.end-card h3 {
+
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.9rem;
+
+  margin: 0 0 16px;
+
+  color: #1f7a74;
+
+  letter-spacing: 1px;
+}
+
+
+/* body */
+.end-card div {
+
+  font-size: 1.15rem;
+  line-height: 1.8;
+
+  color: #1f2e2c;
+
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+
+/* reveal animation */
+@keyframes misoEndReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* mobile */
+@media (max-width: 600px) {
+
+  .end-card {
+    padding: 26px 18px;
+  }
+
+  .end-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .end-card div {
+    font-size: 1.05rem;
+  }
+
+}
+
+/* RIDDLE & ANSWER */
 
 .riddle {
   margin-top: 40px;
@@ -129,6 +334,8 @@ h2 {
   font-weight: bold;
   color: #065da9;
 }
+
+/* HINT */
 
 .hint-container {
   margin-top: 30px;
@@ -167,6 +374,7 @@ h2 {
   max-height: 100px;
 }
 
+/* MAP */
 
 .map-container {
   margin-top: 30px;
@@ -325,6 +533,59 @@ h2 {
 }
 
 
+/* STEP NAV (← x/n →) */
+.progressline{
+  margin: 10px auto 6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
 
+  font-family:'Amatic SC', cursive;
+  font-size: 1.4rem;         
+  font-weight: 700;
+  color:#2f6b4f;
 
+  opacity:0;
+  transform: translateY(-4px);
+  transition: opacity .45s ease, transform .45s ease;
+}
 
+.progressline.show{
+  opacity:1;
+  transform: translateY(0);
+}
+
+.progressline__counter{
+  min-width:64px;
+  text-align:center;
+  letter-spacing:.5px;
+}
+
+.progressline__arrow{
+  border:none;
+  background:none;
+  font-family:'Amatic SC', cursive;
+  font-size:1.6rem;          /* bolder arrows */
+  font-weight:600;
+  cursor:pointer;
+  color:#2f6b4f;
+  padding:2px 10px;
+  border-radius:10px;
+  transition: all .2s ease;
+  opacity:.95;
+}
+
+.progressline__arrow:hover{
+  background:#2f6b4f;
+  color:white;
+  transform: scale(1.06);
+}
+
+.progressline__arrow:disabled{
+  opacity:.25;
+  cursor:default;
+  background:none;
+  color:#2f6b4f;
+  transform:none;
+}
