@@ -7,6 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/miso-icon.png">
 </head>
 <body>
 
@@ -15,6 +16,12 @@
     <span onclick="setLang('en')">EN</span>
     <span onclick="setLang('it')">IT</span>
     <span onclick="setLang('de')">DE</span>
+  </div>
+  
+  <div class="progressline" id="stepNav" style="display:none;">
+    <button class="progressline__arrow" id="prevBtn" type="button">←</button>
+    <span class="progressline__counter" id="stepCounter">1/4</span>
+    <button class="progressline__arrow" id="nextBtn" type="button">→</button>
   </div>
 
   <main class="content">
@@ -63,6 +70,7 @@
 
 </body>
 </html>
+
 
 
 
