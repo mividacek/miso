@@ -1,6 +1,23 @@
 let mapLoaded = false;
 
 /* -----------------------------
+   FADE IN (smooth)
+------------------------------*/
+function initFadeIn() {
+  document.body.classList.add("fade-in");
+  requestAnimationFrame(() => {
+    document.body.classList.add("fade-in--show");
+  });
+}
+
+function fadeOutAndGo(url) {
+  document.body.classList.remove("fade-in--show");
+  setTimeout(() => {
+    window.location.href = url;
+  }, 220);
+}
+
+/* -----------------------------
    READ URL PARAMS
 ------------------------------*/
 function getParams() {
@@ -14,6 +31,9 @@ function detectLocation() {
 
 const CURRENT_LOCATION = detectLocation();
 
+/* -----------------------------
+   TEXTS
+------------------------------*/
 function getTexts(lang) {
   const locationData = LOCATIONS[CURRENT_LOCATION];
   if (!locationData) return null;
@@ -22,25 +42,26 @@ function getTexts(lang) {
 
 /* -----------------------------
    LANGUAGE DETECTION
+   Priority: URL > browser > saved > fallback
 ------------------------------*/
 function detectLanguage() {
   const locationData = LOCATIONS[CURRENT_LOCATION] || {};
   const params = getParams();
 
-  // 1) URL lang
+  // 1) URL lang (highest priority)
   const urlLang = (params.get("lang") || "").toLowerCase();
   if (urlLang && locationData[urlLang]) {
     localStorage.setItem("lang", urlLang);
     return urlLang;
   }
 
-  // 2) saved
-  const savedLang = (localStorage.getItem("lang") || "").toLowerCase();
-  if (savedLang && locationData[savedLang]) return savedLang;
-
-  // 3) browser
+  // 2) browser default (second priority)
   const browserLang = (navigator.language || "en").slice(0, 2).toLowerCase();
   if (locationData[browserLang]) return browserLang;
+
+  // 3) last selected (third priority)
+  const savedLang = (localStorage.getItem("lang") || "").toLowerCase();
+  if (savedLang && locationData[savedLang]) return savedLang;
 
   // 4) fallback
   return "en";
@@ -49,7 +70,6 @@ function detectLanguage() {
 /* -----------------------------
    UI HELPERS
 ------------------------------*/
-
 
 function closeMapUI() {
   const map = document.getElementById("mapContainer");
@@ -80,13 +100,11 @@ function closeHintUI() {
 
 function isNonEmptyHtml(value) {
   if (!value) return false;
-  // ukloni HTML i whitespace da ne prođe "<p><br></p>"
   const tmp = document.createElement("div");
   tmp.innerHTML = String(value);
   const text = (tmp.textContent || "").replace(/\u00A0/g, " ").trim();
   return text.length > 0;
 }
-
 
 function setVisible(el, shouldShow, displayType = "block") {
   if (!el) return;
@@ -96,7 +114,6 @@ function setVisible(el, shouldShow, displayType = "block") {
 /* -----------------------------
    LOCATION PROGRESS
 ------------------------------*/
-
 const PROGRESS_KEY = "miso_progress_v1";
 
 function loadProgress() {
@@ -129,35 +146,118 @@ function markVisited(loc) {
   saveProgress(p);
 }
 
-
-
 function canOpenLocation(loc) {
   if (loc === "start") return true;
   const idx = stepIndex(loc);
   if (idx === -1) return false;
   const p = loadProgress();
-  return p.maxStep >= (idx - 1);
+
+  // NEW: stricter unlock (so start does NOT auto-unlock ribnjak)
+  return p.maxStep >= idx;
 }
 
 /* -----------------------------
    GATE (lock screen)
 ------------------------------*/
-
-
 if (CURRENT_LOCATION !== "start" && !canOpenLocation(CURRENT_LOCATION)) {
-  console.log("GATE BLOCKED", {
-    CURRENT_LOCATION,
-    idx: stepIndex(CURRENT_LOCATION),
-    progress: loadProgress(),
-  });
-
-  const lang = (getParams().get("lang") || "en").toLowerCase();
+  const lang = (getParams().get("lang") || detectLanguage() || "en").toLowerCase();
   window.location.replace(
-  `locked.html?loc=${encodeURIComponent(CURRENT_LOCATION)}&lang=${encodeURIComponent(lang)}`
-);
-throw new Error("Redirecting to locked.html");
-
+    `locked.html?loc=${encodeURIComponent(CURRENT_LOCATION)}&lang=${encodeURIComponent(lang)}`
+  );
+  throw new Error("Redirecting to locked.html");
 }
+
+/* -----------------------------
+   STEP NAV (← 2/4 → + skip warning)
+------------------------------*/
+const NAV_COPY = {
+  hr: {
+    warn: "Možeš preskočiti ako moraš, ali varanje nije zabavno.\n\nŽeliš nastaviti na sljedeću lokaciju?"
+  },
+  en: {
+    warn: "You can skip if needed, but cheating is no fun.\n\nDo you want to continue to the next location?"
+  },
+  it: {
+    warn: "Puoi saltare se necessario, ma barare non è divertente.\n\nVuoi continuare alla tappa successiva?"
+  },
+  de: {
+    warn: "Du kannst überspringen, aber Schummeln macht keinen Spaß.\n\nMöchtest du zum nächsten Ort weitergehen?"
+  }
+};
+
+function buildUrlForLoc(loc, lang) {
+  return `index.html?loc=${encodeURIComponent(loc)}&lang=${encodeURIComponent(lang)}&fade=1`;
+}
+
+// unlock just enough so next location opens (skip)
+function unlockForNextLocation(nextLoc) {
+  const route = (typeof ROUTE !== "undefined") ? ROUTE : ["start"];
+  const nextIdx = route.indexOf(nextLoc);
+  if (nextIdx < 0) return;
+
+  const p = loadProgress();
+
+  // NEW: strict gate => need maxStep >= nextIdx
+  p.maxStep = Math.max(p.maxStep, nextIdx);
+
+  // mark all up to nextIdx as visited (optional, but keeps it consistent)
+  for (let i = 0; i <= nextIdx; i++) {
+    p.visited[route[i]] = true;
+  }
+
+  saveProgress(p);
+}
+
+
+function renderStepNav(lang) {
+  const nav = document.getElementById("stepNav");
+  const counter = document.getElementById("stepCounter");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  if (!nav || !counter || !prevBtn || !nextBtn) return;
+
+  const route = (typeof ROUTE !== "undefined") ? ROUTE : ["start"];
+  const idx = route.indexOf(CURRENT_LOCATION);
+  const n = route.length;
+
+  if (idx === -1 || n <= 1) {
+    nav.classList.remove("show");
+    nav.style.display = "none";
+    return;
+  }
+
+  nav.style.display = "flex";
+  requestAnimationFrame(() => nav.classList.add("show"));
+
+  counter.textContent = `${idx + 1}/${n}`;
+
+  prevBtn.disabled = (idx === 0);
+  nextBtn.disabled = (idx === n - 1);
+
+  prevBtn.onclick = () => {
+    if (idx <= 0) return;
+    const url = buildUrlForLoc(route[idx - 1], lang);
+    fadeOutAndGo(url);
+  };
+
+  nextBtn.onclick = () => {
+    if (idx >= n - 1) return;
+
+    const nextLoc = route[idx + 1];
+
+    if (!canOpenLocation(nextLoc)) {
+      const c = NAV_COPY[lang] || NAV_COPY.en;
+      const ok = window.confirm(c.warn);
+      if (!ok) return;
+
+      unlockForNextLocation(nextLoc);
+    }
+
+    const url = buildUrlForLoc(nextLoc, lang);
+    fadeOutAndGo(url);
+  };
+}
+
 
 
 /* -----------------------------
@@ -170,7 +270,6 @@ function setLang(lang) {
   localStorage.setItem("lang", lang);
   document.documentElement.lang = lang;
 
-  // Fill ALL content
   const titleEl = document.getElementById("title");
   const locationEl = document.getElementById("location");
   const storyEl = document.getElementById("story");
@@ -187,7 +286,7 @@ function setLang(lang) {
 
   const endCardEl = document.getElementById("endCard");
   const endTitleEl = document.getElementById("endTitle");
-  const endTextEl  = document.getElementById("endText");
+  const endTextEl = document.getElementById("endText");
 
   if (titleEl) titleEl.innerHTML = t.title || "";
   if (locationEl) locationEl.innerHTML = t.location || "";
@@ -205,39 +304,36 @@ function setLang(lang) {
   if (infoTitleEl) infoTitleEl.innerHTML = t.infoTitle || "";
   if (infoTextEl) infoTextEl.innerHTML = t.infoText || "";
 
-  // INFO block (otvoren po defaultu)
+  // INFO block
   const hasInfo = isNonEmptyHtml(t.infoTitle) || isNonEmptyHtml(t.infoText);
   if (infoBlockEl) {
     infoBlockEl.style.display = hasInfo ? "block" : "none";
     infoBlockEl.open = true;
   }
 
-  // END card (fallback na ENG)
+  // END card (fallback EN)
   const locationData = LOCATIONS[CURRENT_LOCATION] || {};
   const enFallback = locationData.en || {};
-
   const endTitle = t.endTitle || enFallback.endTitle || "";
-  const endText  = t.endText  || enFallback.endText  || "";
+  const endText = t.endText || enFallback.endText || "";
 
   if (endTitleEl) endTitleEl.innerHTML = endTitle;
-  if (endTextEl)  endTextEl.innerHTML  = endText;
+  if (endTextEl) endTextEl.innerHTML = endText;
 
   const hasEnd = isNonEmptyHtml(endTitle) || isNonEmptyHtml(endText);
   setVisible(endCardEl, hasEnd, "block");
 
-
-
-  // reset UI states on language change
+  // reset states
   closeHintUI();
   closeMapUI();
 
-  // --- VISIBILITY RULES (hide empty sections) ---
+  // visibility rules
   const hintWrap = document.querySelector(".hint-container");
   const mapWrap = document.querySelector(".map-container");
   const riddleWrap = document.querySelector(".riddle");
 
   const hasHint = isNonEmptyHtml(t.hintBtn) && isNonEmptyHtml(t.hint);
-  const hasMap = isNonEmptyHtml(t.mapBtn) && !!(t.map && String(t.map).trim().length > 0);
+  const hasMap  = isNonEmptyHtml(t.mapBtn) && !!(t.map && String(t.map).trim().length > 0);
   const hasRiddle = isNonEmptyHtml(t.riddleTitle) || isNonEmptyHtml(t.riddleText);
 
   setVisible(hintWrap, hasHint);
@@ -247,8 +343,10 @@ function setLang(lang) {
   if (!hasMap) closeMapUI();
   if (!hasHint) closeHintUI();
 
+  // progress + nav
   markVisited(CURRENT_LOCATION);
 
+  renderStepNav(lang);
 }
 
 /* -----------------------------
@@ -273,7 +371,6 @@ function toggleMap() {
   const t = getTexts(lang);
   if (!t) return;
 
-  // If already loaded -> just toggle open/close
   if (mapLoaded) {
     const willShow = !map.classList.contains("show");
     map.classList.toggle("show", willShow);
@@ -282,12 +379,10 @@ function toggleMap() {
     return;
   }
 
-  // First time: show loader + text, then inject iframe
   btn.classList.add("loading");
   loader.classList.add("show");
   loadingText.classList.add("show");
 
-  // ensure closed state before opening
   map.classList.remove("show");
   title.classList.remove("show");
 
@@ -308,9 +403,5 @@ function toggleMap() {
 /* -----------------------------
    INIT
 ------------------------------*/
+initFadeIn();
 setLang(detectLanguage());
-
-
-
-
-
