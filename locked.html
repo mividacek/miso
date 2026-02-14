@@ -1,4 +1,3 @@
-<!-- locked.html -->
 <!DOCTYPE html>
 <html lang="hr">
 <head>
@@ -8,6 +7,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/miso-icon.png">
 
   <style>
     .locked-card{
@@ -87,7 +87,6 @@
       <button id="continueBtn" class="btn-like" type="button"></button>
     </div>
 
-    <!-- START INFO (hidden until "Kreni od početka") -->
     <div id="startInfo" style="display:none; margin-top:20px;">
       <p class="small" id="startInfoText"></p>
 
@@ -100,8 +99,7 @@
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-
-      <!-- Button under the map -->
+      
       <div class="start-actions">
         <button id="openStartBtn" class="btn-like" type="button"></button>
       </div>
@@ -177,21 +175,17 @@
       document.getElementById("lockedTitle").textContent = c.title;
       document.getElementById("lockedText").textContent  = c.text;
 
-      // main buttons
       document.getElementById("goStartBtn").textContent   = c.btnStart;
       document.getElementById("continueBtn").textContent  = c.btnContinue;
 
-      // map button
       document.getElementById("openStartBtn").textContent = c.btnAlreadyThere;
 
-      // if startInfo already visible -> update its text
       const startInfoBox = document.getElementById("startInfo");
       if (startInfoBox && startInfoBox.style.display !== "none") {
         document.getElementById("startInfoText").textContent = c.startInfo;
       }
     }
 
-    // Continue from here
     document.getElementById("continueBtn").addEventListener("click", () => {
       const idx = ROUTE_SAFE.indexOf(loc);
       const p = loadProgress();
@@ -217,20 +211,17 @@
         document.getElementById("startInfoText").textContent = c.startInfo;
         document.getElementById("startInfo").style.display = "block";
         
-        // sakrij samo gumb "Kreni od početka"
-        
         document.getElementById("goStartBtn").style.display = "none";
     });
 
 
-    // Under-map button: open start
     document.getElementById("openStartBtn").addEventListener("click", () => {
       localStorage.removeItem(PROGRESS_KEY);
       location.href = `index.html?loc=start&lang=${encodeURIComponent(lang)}`;
     });
 
-    // init
     setLangUI(lang);
   </script>
 </body>
 </html>
+
