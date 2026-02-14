@@ -536,7 +536,7 @@ h2 {
 /* STEP NAV (← x/n →) */
 .progressline{
   margin: 10px auto 6px;
-  display:flex;
+  display:center;
   align-items:center;
   justify-content:center;
   gap:16px;
@@ -589,3 +589,4 @@ h2 {
   color:#2f6b4f;
   transform:none;
 }
+
