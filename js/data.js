@@ -51,7 +51,7 @@ const LOCATIONS = {
       mapLocation: "Ribnjak",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d898.352948114783!2d13.759159067810666!3d44.922272537023126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059844829!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d653.8395698089157!2d13.758904269615494!3d44.922758947773865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzIxLjkiTiAxM8KwNDUnMzQuNCJF!5e1!3m2!1shr!2shr!4v1771074164501!5m2!1shr!2shr"
           width="600"
           height="450"
           style="border:0;"
@@ -95,7 +95,7 @@ const LOCATIONS = {
       mapLocation: "Fishpond",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d898.352948114783!2d13.759159067810666!3d44.922272537023126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059844829!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1307.6791384290677!2d13.758904!3d44.922759!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzIxLjkiTiAxM8KwNDUnMzQuNCJF!5e1!3m2!1sen!2shr!4v1771074916538!5m2!1sen!2shr"
           width="600"
           height="450"
           style="border:0;"
@@ -139,7 +139,7 @@ const LOCATIONS = {
       mapLocation: "Peschiera",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d898.352948114783!2d13.759159067810666!3d44.922272537023126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059844829!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1307.6791384290677!2d13.758904!3d44.92275899999999!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzIxLjkiTiAxM8KwNDUnMzQuNCJF!5e1!3m2!1sit!2shr!4v1771074986279!5m2!1sit!2shr"          width="600"
           width="600"
           height="450"
           style="border:0;"
@@ -183,7 +183,7 @@ const LOCATIONS = {
       mapLocation: "Fischteich",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d898.352948114783!2d13.759159067810666!3d44.922272537023126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059844829!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d872.7683230471293!2d13.759033093703119!3d44.922943586720756!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzIxLjkiTiAxM8KwNDUnMzQuNCJF!5e1!3m2!1sde!2shr!4v1771075156018!5m2!1sde!2shr"
           width="600"
           height="450"
           style="border:0;"
@@ -254,7 +254,7 @@ const LOCATIONS = {
       mapLocation: "Safari park",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1903.5089324480175!2d13.74053046126964!3d44.92331888738671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059913194!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1307.6556237756504!2d13.74133843699756!3d44.923792063572634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI1LjciTiAxM8KwNDQnMzEuNCJF!5e1!3m2!1shr!2shr!4v1771075434417!5m2!1shr!2shr"
           width="600"
           height="450"
           style="border:0;"
@@ -320,7 +320,7 @@ const LOCATIONS = {
       mapLocation: "Safari Park",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1903.5089324480175!2d13.74053046126964!3d44.92331888738671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059913194!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1307.6553156558778!2d13.7420556!3d44.9238056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI1LjciTiAxM8KwNDQnMzEuNCJF!5e1!3m2!1sen!2shr!4v1771075544562!5m2!1sen!2shr"          width="600"
           width="600"
           height="450"
           style="border:0;"
@@ -381,7 +381,7 @@ const LOCATIONS = {
       mapLocation: "Parco safari",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1903.5089324480175!2d13.74053046126964!3d44.92331888738671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059913194!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1307.6553156558778!2d13.7420556!3d44.9238056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI1LjciTiAxM8KwNDQnMzEuNCJF!5e1!3m2!1sit!2shr!4v1771075617831!5m2!1sit!2shr"          width="600"
           width="600"
           height="450"
           style="border:0;"
@@ -442,7 +442,7 @@ const LOCATIONS = {
       mapLocation: "Safari-Park",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1903.5089324480175!2d13.74053046126964!3d44.92331888738671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771059913194!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1307.6553156558778!2d13.7420556!3d44.9238056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzI1LjciTiAxM8KwNDQnMzEuNCJF!5e1!3m2!1sde!2shr!4v1771075701147!5m2!1sde!2shr"          width="600"
           width="600"
           height="450"
           style="border:0;"
@@ -528,7 +528,7 @@ const LOCATIONS = {
       mapLocation: "Sljedeća lokacija",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5231.047952698832!2d13.751947661895102!3d44.91912259413784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771060019262!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d653.8841815091041!2d13.75376926961547!3d44.918838947838665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzA3LjgiTiAxM8KwNDUnMTUuOSJF!5e1!3m2!1shr!2shr!4v1771076081613!5m2!1shr!2shr"
           width="600"
           height="450"
           style="border:0;"
@@ -604,8 +604,7 @@ const LOCATIONS = {
       mapLocation: "Next location",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5231.047952698832!2d13.751947661895102!3d44.91912259413784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771060019262!5m2!1shr!2shr"
-          width="600"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d653.8842457823272!2d13.7544167!3d44.9188333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzA3LjgiTiAxM8KwNDUnMTUuOSJF!5e1!3m2!1sen!2shr!4v1771076217847!5m2!1sen!2shr"          width="600"
           height="450"
           style="border:0;"
           allowfullscreen=""
@@ -680,8 +679,7 @@ const LOCATIONS = {
       mapLocation: "Prossima tappa",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5231.047952698832!2d13.751947661895102!3d44.91912259413784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771060019262!5m2!1shr!2shr"
-          width="600"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d653.8842457823272!2d13.7544167!3d44.9188333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzA3LjgiTiAxM8KwNDUnMTUuOSJF!5e1!3m2!1sit!2shr!4v1771076322710!5m2!1sit!2shr"          width="600"
           height="450"
           style="border:0;"
           allowfullscreen=""
@@ -756,7 +754,7 @@ const LOCATIONS = {
       mapLocation: "Nächster Ort",
       map: `
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5231.047952698832!2d13.751947661895102!3d44.91912259413784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1shr!2shr!4v1771060019262!5m2!1shr!2shr"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d653.8842457823272!2d13.7544167!3d44.9188333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDU1JzA3LjgiTiAxM8KwNDUnMTUuOSJF!5e1!3m2!1sde!2shr!4v1771076407840!5m2!1sde!2shr"
           width="600"
           height="450"
           style="border:0;"
@@ -2667,3 +2665,4 @@ kucazabrodice: {
 
 window.ROUTE = ROUTE; 
 window.LOCATIONS = LOCATION
+
